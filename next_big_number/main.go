@@ -39,7 +39,7 @@ func sliceToInt(numb []int) int {
 func NextBigger(n int) int {
 	numb := intToSlice(n)
 	i := 0
-	for i := 0; i < len(numb) - 1; i++ {
+	for i := 0; i < len(numb); i++ {
 		if numb[i] > numb[i + 1] {
 			break
 		}
@@ -49,19 +49,46 @@ func NextBigger(n int) int {
 	}
 
 	mn := i
-
 	for j := 0; j < i; j++ {
 		if numb[j] > numb[i + 1] {
 			mn = j
 		}
 	}
-	numb[mn], numb[i+1] = numb[i + 1], numb[mn]
+	numb[mn], numb[i + 1] = numb[i + 1], numb[mn]
 	tmp := numb[:i + 1]
-	sort.Slice(tmp, func(i, j int) bool {
+	//fmt.Println("the temp: ", tmp)
+	sort.Slice(tmp, func(i,j int) bool {
 		return tmp[i] > tmp[j]
 	})
 	return sliceToInt(numb)
 }
+
+//func NextBigger(n int) int {
+//	numb := intToSlice(n)
+//	i := 0
+//	for i := 0; i < len(numb) - 1; i++ {
+//		if numb[i] > numb[i + 1] {
+//			break
+//		}
+//	}
+//	if i == len(numb)-1 {
+//		return -1
+//	}
+//
+//	mn := i
+//
+//	for j := 0; j < i; j++ {
+//		if numb[j] > numb[i + 1] {
+//			mn = j
+//		}
+//	}
+//	numb[mn], numb[i+1] = numb[i + 1], numb[mn]
+//	tmp := numb[:i + 1]
+//	sort.Slice(tmp, func(i, j int) bool {
+//		return tmp[i] > tmp[j]
+//	})
+//	return sliceToInt(numb)
+//}
 
 func countDigit(i int) (count int) {
 	for i != 0 {
