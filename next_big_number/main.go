@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"math"
 	"sort"
-	"strconv"
-	"strings"
 )
 
 //Create a function that takes a positive integer and returns the next bigger number that can be formed by rearranging its digits. For example:
@@ -15,12 +13,6 @@ import (
 
 
 func main() {
-
-	//sepNumbers(409)
-	//fmt.Println(play(480))
-
-	//fmt.Println(intToSlice(34575))
-	//fmt.Println(sliceToInt([]int{1,2,3,4}))
 
 	fmt.Println(NextBigger(3452))
 
@@ -71,8 +63,6 @@ func NextBigger(n int) int {
 	return sliceToInt(numb)
 }
 
-
-
 func countDigit(i int) (count int) {
 	for i != 0 {
 		i = i /10
@@ -81,47 +71,4 @@ func countDigit(i int) (count int) {
 		count++
 	}
 	return count
-}
-
-func sepNumbers(n int) {
-
-	ans := strings.Split(string(n), "")
-	fmt.Println(ans)
-}
-
-func strDigits(n, digits int) (string, int) {
-	s := strconv.Itoa(n)
-	if s[0] == '-' {
-		s = s[1:]
-	}
-	if digits > len(s) {
-		digits = len(s)
-	}
-	if digits < 0 {
-		digits = 0
-	}
-	return s, digits
-}
-
-func play(n int) int {
-
-	nums := strconv.Itoa(n)
-
-	if len(nums) <= 0 {
-		return -1
-	}
-	if len(nums) == 1 {
-		return n
-	}
-
-	//register the first number, and assume it is the biggest:
-	strs := make([]string, 0)
-	strs = append(strs, nums[:1])
-
-	for i, v := range nums {
-		fmt.Println("the v: ", v)
-		fmt.Println("the str: ", strs[i])
-	}
-
-	return 999
 }
