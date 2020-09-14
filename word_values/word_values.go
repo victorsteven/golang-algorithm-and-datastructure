@@ -50,6 +50,8 @@ func NameValue2(my_list []string) []int {
 }
 
 
+
+//This is not an optimized solution and is buggy
 //func NameValue(my_list []string) (result []int) {
 //
 //	for i, sentence := range my_list {
