@@ -42,8 +42,6 @@ func expensiveFib(n int64) int64 {
 
 	result := expensiveFib(n-1) + expensiveFib(n-2)
 
-	//trackTime(time.Now(), result, "Recursion")
-
 	return result
 }
 
@@ -59,8 +57,6 @@ func FibByLoop(n int64) int64 {
 	}
 
 	result := fibBox[n]
-
-	//trackTime(time.Now(), result, "Loop")
 
 	return result
 }
@@ -83,8 +79,6 @@ func memoize(fn funcFib) func(int64)int64 {
 		}
 		result := fn(n)
 		cache[n] = result
-
-		//defer trackTime(time.Now(), result, "Memoization")
 
 		return result
 	}
