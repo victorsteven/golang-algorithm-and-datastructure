@@ -12,4 +12,6 @@ func TestSolve(t *testing.T) {
 	assert.Equal(t, Solve2("abababababfapeifapefijaefaepfjavnefjnfbhwyfnjsifjapnes"), 143)
 	assert.Equal(t, Solve2("codewars"), 37)
 
+	assert.Equal(t, Solve("this is the man at the balcony"), 39)
+
 }

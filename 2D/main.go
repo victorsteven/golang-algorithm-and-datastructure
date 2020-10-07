@@ -75,7 +75,7 @@ import "fmt"
 
 func main() {
 
-	star(10)
+	//star(10)
 
 
 	image1 := [][]int {
