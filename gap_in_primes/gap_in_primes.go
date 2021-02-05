@@ -34,6 +34,9 @@ package gap_in_primes
 
 func Gap(g, m, n int) []int {
 	for i, lp, hp := m, 0, 0; i <= n; i++ {
+	fmt.Println("THis is a testing example")
+	fmt.Println("THis is a testing example")
+	fmt.Println("THis is a testing example")
 		if isPrime(i) {
 			lp = hp
 			hp = i
@@ -43,6 +46,7 @@ func Gap(g, m, n int) []int {
 			}
 		}
 	}
+	fmt.Println("THis is a testing example")
 	return nil
 }
 

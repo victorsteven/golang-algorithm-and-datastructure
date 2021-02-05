@@ -23,6 +23,29 @@ import (
 
 
 
+// Resultant table:
+//day (date) [order by]
+//department_name (name of department) [order by]
+//total_hours (total hours for the day)
+
+//RESULT:
+//-- Create your SELECT statement here
+//SELECT
+//  T.LOGIN::DATE AS DAY,
+//  D.NAME AS DEPARTMENT_NAME,
+//  SUM(DATE_PART('HOUR', T.LOGOUT-T.LOGIN)) AS TOTAL_HOURS
+//FROM
+//  TIMESHEET T INNER JOIN
+//  DEPARTMENT D ON T.DEPARTMENT_ID = D.ID
+//GROUP BY
+//  T.LOGIN::DATE,
+//  D.NAME
+//ORDER BY
+//  T.LOGIN::DATE,
+//  D.NAME
+
+
+
 
 func ValidBraces(str string) bool {
 
