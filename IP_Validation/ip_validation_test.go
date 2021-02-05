@@ -41,7 +41,7 @@ func TestValidIP(t *testing.T) {
 	for _, v := range fixtures {
 
 		t.Run(fmt.Sprintf("%s test", v.IP), func(t *testing.T) {
-			isValid := Is_valid_ip(v.IP)
+			isValid := Is_valid_ip2(v.IP)
 			assert.Equal(t, v.IsValid, isValid)
 		})
 
