@@ -43,11 +43,9 @@ func Solve2(str string) string {
 			uppers++
 		}
 	}
-	if uppers > len(str) / 2 {
+	if uppers > len(str)/2 {
 		return strings.ToUpper(str)
 	}
 
 	return strings.ToLower(str)
 }
-
-

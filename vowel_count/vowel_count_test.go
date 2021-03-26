@@ -12,5 +12,3 @@ func TestGetCount(t *testing.T) {
 
 	assert.Equal(t, vowel_count.GetCount4(" uethhztm sggi rprrxl risbs hsclup"), 5)
 }
-
-

@@ -32,9 +32,8 @@ func GetCount(str string) (count int) {
 	return count
 }
 
-
 func GetCount2(str string) (count int) {
-	for _, c := range str  {
+	for _, c := range str {
 		switch c {
 		case 'a', 'e', 'i', 'o', 'u':
 			count++

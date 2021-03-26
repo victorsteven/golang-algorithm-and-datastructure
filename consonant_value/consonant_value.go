@@ -87,7 +87,7 @@ func Solve2(str string) (maximum int) {
 			sum = 0
 			continue
 		}
-		sum +=  int(r) -'a' + 1
+		sum += int(r) - 'a' + 1
 
 		if sum > maximum {
 			maximum = sum

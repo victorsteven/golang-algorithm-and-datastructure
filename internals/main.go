@@ -12,40 +12,28 @@ func main() {
 
 	y := &x
 
-
-
 	fmt.Println(*y)
-
-
 
 	*y = 2
 
 	fmt.Println(x)
 
 	const (
-
 		i = 7
 
 		j
 
 		k
-
 	)
 	fmt.Println(i, j, k)
 
-
-
 	a := [9]int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-
-
 
 	// creates new slice
 
 	s := a[2:4]
 
 	fmt.Println(s)
-
-
 
 	//var v []int
 
@@ -66,7 +54,6 @@ func main() {
 
 	fmt.Printf("len=%d, cap=%d\n", len(newS), cap(newS))
 
-
 	h := []int{1, 2, 3, 4, 5, 6}
 
 	h = append(h, 7, 8)
@@ -75,7 +62,6 @@ func main() {
 
 	//fmt.Printf("len=%d, len(h))
 
-
 	s2 := []int{1, 2, 3}
 
 	s3 := []int{4, 5, 6, 7}
@@ -83,8 +69,6 @@ func main() {
 	n2 := copy(s2, s3)
 
 	fmt.Printf("n2=%d, s2=%v, s3=%v\n", n2, s2, s3)
-
-
 
 }
 
@@ -95,5 +79,3 @@ func string_internals(b []byte) {
 	b[1] = '4'
 	fmt.Printf("%+v. And the type is: %T\n ", s, s)
 }
-
-

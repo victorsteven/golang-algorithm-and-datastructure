@@ -7,8 +7,8 @@ import "strings"
 const (
 	capitalA = 'A'
 	capitalZ = 'Z'
-	smallA = 'a'
-	smallZ = 'z'
+	smallA   = 'a'
+	smallZ   = 'z'
 )
 
 func IsPalindromeCaseInsensitive(s string) bool {
@@ -27,7 +27,7 @@ func IsPalindromeCaseInsensitive(s string) bool {
 			i++
 			continue
 		}
-		if  !isCharacterCaseInsensitive(runes[j]) {
+		if !isCharacterCaseInsensitive(runes[j]) {
 			j--
 			continue
 		}
@@ -69,7 +69,6 @@ func IsPalindrome(sentence string) bool {
 	}
 	return true
 }
-
 
 func isCharacter(character rune) bool {
 	if character >= capitalA && character <= capitalZ {

@@ -8,17 +8,17 @@ func Solution(s string) int {
 
 	//check how many times the same character occurs:
 	for _, v := range s {
-		count[v - 'a']++
+		count[v-'a']++
 	}
 
 	//making frequency of first character of string equal to 1
-	count[s[0] - 'a'] = 1
+	count[s[0]-'a'] = 1
 
 	// Finding the product of frequency of occurrence of each character.
 	ans := 1
 
 	//get the others:
-	for i := 0; i < 26;  i++ {
+	for i := 0; i < 26; i++ {
 		if count[i] != 0 {
 			ans *= count[i]
 		}

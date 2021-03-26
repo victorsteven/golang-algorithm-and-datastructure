@@ -26,7 +26,6 @@ func main() {
 	}
 	fmt.Println("FInal 2: ", ss) //this will be previous value plus 10, because we updated the previous value
 
-
 	m := make(map[string]int) //A
 	m["a"] = 1
 	if v, ok := m["a"]; ok { //B
@@ -62,6 +61,7 @@ func main() {
 type S struct {
 	m string
 }
+
 func f() *S {
 	return &S{"foo"}
 }
@@ -81,10 +81,10 @@ func printCorrect() {
 
 //Exit the outer forloop
 func outerForloop() {
-	outer:
+outer:
 	for i := 0; i < 3; i++ {
 		for j := 0; j < 3; j++ {
-			print(i, ",",j,"")
+			print(i, ",", j, "")
 			break outer
 		}
 		println()
@@ -114,11 +114,11 @@ func goRoutineClosure() {
 func interfaceEqual() {
 
 	type S struct {
-		a,b,c string
+		a, b, c string
 	}
 	x := interface{}(&S{"a", "b", "c"})
 	y := interface{}(&S{"a", "b", "c"})
-	fmt.Println(reflect.DeepEqual(x,y))
+	fmt.Println(reflect.DeepEqual(x, y))
 }
 
 func mapImmutability() {

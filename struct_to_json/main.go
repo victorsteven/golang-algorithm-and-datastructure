@@ -7,9 +7,10 @@ import (
 
 type Customer struct {
 	Name string `json:"name"`
-	Age int `json:"age"`
+	Age  int    `json:"age"`
 }
-func main(){
+
+func main() {
 	cus := Customer{
 		Name: "Mike",
 		Age:  30,

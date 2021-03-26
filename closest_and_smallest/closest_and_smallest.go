@@ -97,8 +97,8 @@ import (
 //See Example tests for the format of the results in your language.
 
 type Number struct {
-	DigiStr string
-	Weight int
+	DigiStr  string
+	Weight   int
 	Position int
 }
 
@@ -147,7 +147,7 @@ func Closest(str string) string {
 	var minPos1, minPos2, minDiff = -1, -1, math.MaxInt64
 
 	for i := 1; i < len(numbers); i++ {
-		var diff = numbers[i].Weight - numbers[i - 1].Weight
+		var diff = numbers[i].Weight - numbers[i-1].Weight
 		if diff < minDiff {
 			minDiff = diff
 			minPos1 = i - 1
@@ -162,7 +162,6 @@ func Closest(str string) string {
 	return fmt.Sprintf("[(%d, %d, %s), (%d, %d, %s)]", number1.Weight, number1.Position, number1.DigiStr, number2.Weight, number2.Position, number2.DigiStr)
 
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////////////
 type Num struct {
@@ -225,11 +224,11 @@ func Closest2(str string) string {
 			continue
 		}
 
-		tmp := numbers[i].weight - numbers[i - 1].weight
+		tmp := numbers[i].weight - numbers[i-1].weight
 
 		if tmp < min {
 			min = tmp
-			num1 = numbers[i - 1]
+			num1 = numbers[i-1]
 			num2 = numbers[i]
 		}
 	}
@@ -240,6 +239,3 @@ func Closest2(str string) string {
 
 	return fmt.Sprintf("[%s, %s]", NumberToString(num1), NumberToString(num2))
 }
-
-
-

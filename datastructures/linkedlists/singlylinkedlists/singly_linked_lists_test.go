@@ -74,7 +74,7 @@ func TestSinglyLinkedList_IsEmpty(t *testing.T) {
 	list := New()
 	assert.Equal(t, list.IsEmpty(), true)
 
-	list.Add("hello")
+	list.Add("normal_http_call")
 	assert.Equal(t, list.IsEmpty(), false)
 
 	list.RemoveAt(0)
@@ -85,7 +85,7 @@ func TestSinglylinkedList_Size(t *testing.T) {
 	list := New()
 	assert.Equal(t, list.Size(), 0)
 
-	list.Add("hello")
+	list.Add("normal_http_call")
 	assert.Equal(t, list.Size(), 1)
 
 	list.Add("abc")
@@ -101,10 +101,10 @@ func TestSinglylinkedList_Size(t *testing.T) {
 func TestSinglylinkedList_GetIndexOf(t *testing.T) {
 	list := New()
 
-	assert.Equal(t, list.GetIndexOf("hello"), -1)
+	assert.Equal(t, list.GetIndexOf("normal_http_call"), -1)
 
-	list.Add("hello")
-	assert.Equal(t, list.GetIndexOf("hello"), 0)
+	list.Add("normal_http_call")
+	assert.Equal(t, list.GetIndexOf("normal_http_call"), 0)
 
 	list.Add("abc")
 	assert.Equal(t, list.GetIndexOf("abc"), 1)
@@ -116,10 +116,10 @@ func TestSinglylinkedList_GetIndexOf(t *testing.T) {
 func TestSinglylinkedList_InsertAt(t *testing.T) {
 	list := New()
 
-	err := list.InsertAt(3, "hello")
+	err := list.InsertAt(3, "normal_http_call")
 	assert.NotNil(t, err)
 
-	err = list.InsertAt(0, "hello")
+	err = list.InsertAt(0, "normal_http_call")
 	assert.Nil(t, err)
 }
 
@@ -129,9 +129,9 @@ func TestSinglylinkedList_RemoveAt(t *testing.T) {
 	_, err := list.RemoveAt(0)
 	assert.NotNil(t, err)
 
-	list.Add("hello")
+	list.Add("normal_http_call")
 	value, err := list.RemoveAt(0)
-	assert.Equal(t, value, "hello")
+	assert.Equal(t, value, "normal_http_call")
 	assert.Nil(t, err)
 }
 
@@ -144,7 +144,7 @@ func TestSinglylinkedList_Clear(t *testing.T) {
 	assert.Equal(t, list.IsEmpty(), true)
 	assert.Equal(t, list.Size(), 0)
 
-	list.Add("hello")
+	list.Add("normal_http_call")
 
 	list.Clear()
 
@@ -152,6 +152,3 @@ func TestSinglylinkedList_Clear(t *testing.T) {
 	assert.Equal(t, list.IsEmpty(), true)
 	assert.Equal(t, list.Size(), 0)
 }
-
-
-

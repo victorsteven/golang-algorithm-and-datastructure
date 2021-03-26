@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-
-func  main() {
+func main() {
 	project1 := FixedBilling{projectName: "Project 1", biddedAmount: 5000}
 	project2 := FixedBilling{projectName: "project 2", biddedAmount: 10000}
 	project3 := TimeAndMaterial{projectName: "Project 3", noOfHours: 160, hourlyRate: 25}
@@ -19,7 +18,7 @@ func  main() {
 
 	type theStruct struct {
 		Name string
-		Age int
+		Age  int
 	}
 	newer := new(theStruct)
 	newer.Name = "Ade"
@@ -28,21 +27,21 @@ func  main() {
 }
 
 type Income interface {
-		calculate() int
-		source() string
-	}
+	calculate() int
+	source() string
+}
 
-	type FixedBilling struct {
-		projectName string
-		biddedAmount int
-	}
-	type TimeAndMaterial struct  {
-		projectName string
-		noOfHours int
-		hourlyRate int
-	}
+type FixedBilling struct {
+	projectName  string
+	biddedAmount int
+}
+type TimeAndMaterial struct {
+	projectName string
+	noOfHours   int
+	hourlyRate  int
+}
 
-func (fb FixedBilling) calculate() int  {
+func (fb FixedBilling) calculate() int {
 	return fb.biddedAmount
 }
 func (fb FixedBilling) source() string {

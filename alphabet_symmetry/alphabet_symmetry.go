@@ -21,13 +21,13 @@ import (
 func Solve(slice []string) (result []int) {
 
 	for _, str := range slice {
-	count := 0
-	for i, ch := range strings.ToLower(str) {
-		if int(ch - 'a') == i {
-			count++
+		count := 0
+		for i, ch := range strings.ToLower(str) {
+			if int(ch-'a') == i {
+				count++
+			}
 		}
-	}
-	result = append(result, count)
+		result = append(result, count)
 	}
 	return
 }
@@ -48,4 +48,3 @@ func Solve2(slice []string) []int {
 	}
 	return results
 }
-

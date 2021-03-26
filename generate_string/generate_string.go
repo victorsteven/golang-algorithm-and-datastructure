@@ -20,7 +20,6 @@ import "fmt"
 //Input: A = 4, B = 1
 //Output: aabaa
 
-
 func generateString(A int, B int) string {
 
 	rt := ""
@@ -60,7 +59,6 @@ func generateString(A int, B int) string {
 	}
 	return rt
 }
-
 
 func main() {
 	ans := generateString(2, 6)

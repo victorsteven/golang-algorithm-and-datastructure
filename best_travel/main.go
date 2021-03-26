@@ -10,7 +10,7 @@ func main() {
 	var k = 3
 	var t = 174
 
-   fmt.Println(ChooseBestSum(t,k,ls))
+	fmt.Println(ChooseBestSum(t, k, ls))
 }
 
 //func ChooseBestSum(t, k int, ls []int) int {
@@ -34,7 +34,7 @@ func main() {
 //	return totalDistance
 //}
 
-func ChooseBestSum(t, k int, ls []int) int  {
+func ChooseBestSum(t, k int, ls []int) int {
 	outerbest := -1
 	for i, d := range ls {
 		//not enough remaining values for this d to work
@@ -86,9 +86,8 @@ func combinations(arr, data []int, start, end, index, r int) {
 		buffer = append(buffer, i)
 		return
 	}
-	for i := start; i <= end && end - i + 1 >= r - index; i++ {
+	for i := start; i <= end && end-i+1 >= r-index; i++ {
 		data[index] = arr[i]
-		combinations(arr, data, i+1, end, index + 1, r)
+		combinations(arr, data, i+1, end, index+1, r)
 	}
 }
-

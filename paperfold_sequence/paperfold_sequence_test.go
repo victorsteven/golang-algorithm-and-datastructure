@@ -15,5 +15,5 @@ func TestPaperFold(t *testing.T) {
 	for i := 0; i < 20; i++ {
 		arr = append(arr, <-ch)
 	}
-	assert.Equal(t, arr, []int{1,1,0,1,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,1})
+	assert.Equal(t, arr, []int{1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1})
 }

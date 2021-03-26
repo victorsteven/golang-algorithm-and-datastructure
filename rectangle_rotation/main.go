@@ -9,7 +9,6 @@ import (
 //
 //How many points with integer coordinates are located inside the given rectangle (including on its sides)?
 
-
 func main() {
 
 	ans := RectangleRotation2(6, 4)
@@ -22,4 +21,3 @@ func RectangleRotation2(a, b int) int {
 	x, y := int(float64(a)/2/c), int(float64(b)/2/c)
 	return (x*2+1)*(y*2+1)/2 + (1 - ((x + y) % 2))
 }
-

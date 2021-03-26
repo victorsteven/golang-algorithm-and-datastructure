@@ -100,7 +100,7 @@ func (s *HashSet) Union(ss *HashSet) *HashSet {
 }
 
 //Intersection makes a set that has only the elements common to both of two sets
-func (s *HashSet) Intersection(ss *HashSet) * HashSet {
+func (s *HashSet) Intersection(ss *HashSet) *HashSet {
 	new := s.Copy()
 	for _, v := range new.GetValues() {
 		if !ss.Contains(v) {

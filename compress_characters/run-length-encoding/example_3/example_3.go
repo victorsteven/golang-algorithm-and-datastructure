@@ -24,4 +24,3 @@ func Solution1(str string) string {
 
 	return result
 }
-

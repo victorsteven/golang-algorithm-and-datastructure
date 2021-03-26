@@ -15,11 +15,10 @@ import (
 //
 //If v1 >= v2 then return nil, nothing, null, None or {-1, -1, -1} for C++, C, Go, Nim, [] for Kotlin or "-1 -1 -1".
 
-
 func Race(v1, v2, g int) [3]int {
 	// your code
 	if v1 >= v2 {
-		return  [3]int{-1, -1, -1}
+		return [3]int{-1, -1, -1}
 	}
 
 	SpeedDiv := v2 - v1
@@ -32,7 +31,7 @@ func Race(v1, v2, g int) [3]int {
 	m := t / 60
 	s := t % 60 //what is left of the minutes
 
-	return [3]int {h, m, s}
+	return [3]int{h, m, s}
 }
 
 func main() {

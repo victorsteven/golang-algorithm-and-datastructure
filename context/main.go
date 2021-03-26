@@ -13,12 +13,12 @@ func main() {
 	defer cancel()
 
 	select {
-	case <- time.After(1 * time.Second):
+	case <-time.After(1 * time.Second):
 		fmt.Println("waited for 1 sec")
-	case <- time.After(2 * time.Second):
+	case <-time.After(2 * time.Second):
 		fmt.Println("waited for 2 sec")
-		case <- time.After(3 * time.Second):
-			fmt.Println("waited for 3 seconds")
+	case <-time.After(3 * time.Second):
+		fmt.Println("waited for 3 seconds")
 	case <-ctx.Done():
 		fmt.Println(ctx.Err())
 	}

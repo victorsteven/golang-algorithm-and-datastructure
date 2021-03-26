@@ -30,11 +30,11 @@ import (
 //Decoding: Decoding simply reverses the encoding process.
 
 func main() {
-	quote := `If you wish to make an apple pie from scratch, you must first invent the universe.`;
-    encoded := Encode(10,quote)
+	quote := `If you wish to make an apple pie from scratch, you must first invent the universe.`
+	encoded := Encode(10, quote)
 	fmt.Println(encoded)
 
-    decoded := Decode(encoded)
+	decoded := Decode(encoded)
 	fmt.Println(decoded)
 
 }

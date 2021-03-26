@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 //A natural number is called k-prime if it has exactly k prime factors, counted with multiplicity. A natural number is thus prime if and only if it is 1-prime.
 //Examples:
 //k = 2 -> 4, 6, 9, 10, 14, 15, 21, 22, …
@@ -56,12 +55,11 @@ func main() {
 	fmt.Println(consecPrime(4, []int{10175, 10185, 10180, 10197}))
 }
 
-
 func prime_factors(a int) []int {
 	divisor := 2
 	factors := []int{}
 	for a > 1 {
-		if a % divisor == 0 {
+		if a%divisor == 0 {
 			factors = append(factors, divisor)
 			a = a / divisor
 		} else {
@@ -71,9 +69,6 @@ func prime_factors(a int) []int {
 	return factors
 }
 
-
-
-
 //Another approach
 func consecPrime(k int, arr []int) int {
 	prime_count := []int{}
@@ -81,7 +76,7 @@ func consecPrime(k int, arr []int) int {
 		count := 0
 		divisor := 2
 		for arr[i] > 1 {
-			if  arr[i] % divisor == 0 {
+			if arr[i]%divisor == 0 {
 				count++
 				arr[i] = arr[i] / divisor
 			} else {
@@ -92,7 +87,7 @@ func consecPrime(k int, arr []int) int {
 	}
 	result := 0
 	for i := 0; i < len(prime_count)-1; i++ {
-		if prime_count[i] == prime_count[i+1] &&  prime_count[i] == k {
+		if prime_count[i] == prime_count[i+1] && prime_count[i] == k {
 			result++
 		}
 	}
@@ -124,7 +119,6 @@ func consecPrime(k int, arr []int) int {
 //	}
 //	return result
 //}
-
 
 //checking for prime number
 //func isPrime(a int64) bool {

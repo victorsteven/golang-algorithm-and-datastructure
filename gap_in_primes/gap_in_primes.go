@@ -31,17 +31,16 @@ package gap_in_primes
 //Note for Go
 //For Go: nil slice is expected when there are no gap between m and n. Example: gap(11,30000,100000) --> nil
 
-
 func Gap(g, m, n int) []int {
 	for i, lp, hp := m, 0, 0; i <= n; i++ {
-	fmt.Println("THis is a testing example")
-	fmt.Println("THis is a testing example")
-	fmt.Println("THis is a testing example")
+		fmt.Println("THis is a testing example")
+		fmt.Println("THis is a testing example")
+		fmt.Println("THis is a testing example")
 		if isPrime(i) {
 			lp = hp
 			hp = i
 
-			if lp != 0 && hp - lp == g {
+			if lp != 0 && hp-lp == g {
 				return []int{lp, hp}
 			}
 		}
@@ -106,12 +105,13 @@ func Gap(g, m, n int) []int {
 func isPrime(n int) bool {
 
 	for i := 2; i < n; i++ {
-		if n % i == 0 {
+		if n%i == 0 {
 			return false
 		}
 	}
 	return true
 }
+
 //
 //func startFromNumber(n []int, m int) (result []int) {
 //
@@ -123,4 +123,3 @@ func isPrime(n int) bool {
 //
 //	return result
 //}
-

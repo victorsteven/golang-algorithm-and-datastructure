@@ -13,15 +13,15 @@ package paperfold_sequence
 //
 //It will be tested for up to 1 000 000 values.
 
-func PaperFold(ch chan <- int) {
+func PaperFold(ch chan<- int) {
 	v := 1
 	i := 1
 	for true {
 		v = i
-		for v % 2 == 0 {
+		for v%2 == 0 {
 			v /= 2
 		}
-		if v % 4 == 1 {
+		if v%4 == 1 {
 			ch <- 1
 		} else {
 			ch <- 0
@@ -29,4 +29,3 @@ func PaperFold(ch chan <- int) {
 		i++
 	}
 }
-

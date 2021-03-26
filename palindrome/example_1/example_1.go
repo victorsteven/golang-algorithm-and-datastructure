@@ -1,8 +1,6 @@
 package example_1
 
-
 //Find all numbers less than n, which are palindromic. Numbers can be printed in any order.
-
 
 //func createPalindrome(input, b int, isOdd bool) int {
 //

@@ -18,20 +18,19 @@ import (
 //
 //To understand how the puzzle works, this is an example of a row with 2 clues. Seen from the left side there are 4 buildings visible while seen from the right side only 1:
 
-
 //If no clue is available, add value `0`
 //Each puzzle has only one possible solution
 //`SolvePuzzle()` returns matrix `int[][]`. The first indexer is for the row, the second indexer for the column. (Python: returns 4-tuple of 4-tuples, Ruby: 4-Array of 4-Arrays)
 
 func SolvePuzzle(clues []int) [][]int {
 	ans := make([][]int, 4)
-	ans[0] = []int{1,2,3,4}
+	ans[0] = []int{1, 2, 3, 4}
 	for t1 := true; t1; t1 = next(ans[0]) {
-		ans[1] = []int{1,2,3,4}
+		ans[1] = []int{1, 2, 3, 4}
 		for t2 := true; t2; t2 = next(ans[1]) {
-			ans[2] = []int{1,2,3,4}
+			ans[2] = []int{1, 2, 3, 4}
 			for t3 := true; t3; t3 = next(ans[2]) {
-				ans[3] = []int{1,2,3,4}
+				ans[3] = []int{1, 2, 3, 4}
 				for t4 := true; t4; t4 = next(ans[3]) {
 					if check(ans, clues) {
 						return ans
@@ -49,32 +48,56 @@ func check(puzzle [][]int, clues []int) bool {
 	// check 0,1,2,3
 	for i := 0; i < 4; i++ {
 		cnt := seen([]int{puzzle[0][i], puzzle[1][i], puzzle[2][i], puzzle[3][i]})
-		if cnt > 5 {return false}
-		if clues[i] == 0 {continue}
-		if cnt != clues[i] {return false}
+		if cnt > 5 {
+			return false
+		}
+		if clues[i] == 0 {
+			continue
+		}
+		if cnt != clues[i] {
+			return false
+		}
 	}
 	// check 4-7
 	for i := 0; i < 4; i++ {
 		cnt := seen([]int{puzzle[i][3], puzzle[i][2], puzzle[i][1], puzzle[i][0]})
-		if cnt > 5 {return false}
-		if clues[4+i] == 0 {continue}
-		if cnt != clues[4+i] {return false}
+		if cnt > 5 {
+			return false
+		}
+		if clues[4+i] == 0 {
+			continue
+		}
+		if cnt != clues[4+i] {
+			return false
+		}
 	}
 
 	// check 8-11
 	for i := 0; i < 4; i++ {
 		cnt := seen([]int{puzzle[3][3-i], puzzle[2][3-i], puzzle[1][3-i], puzzle[0][3-i]})
-		if cnt > 5 {return false}
-		if clues[8+i] == 0 {continue}
-		if cnt != clues[8+i] {return false}
+		if cnt > 5 {
+			return false
+		}
+		if clues[8+i] == 0 {
+			continue
+		}
+		if cnt != clues[8+i] {
+			return false
+		}
 	}
 
 	// check 12-15
 	for i := 0; i < 4; i++ {
 		cnt := seen([]int{puzzle[3-i][0], puzzle[3-i][1], puzzle[3-i][2], puzzle[3-i][3]})
-		if cnt > 5 {return false}
-		if clues[12+i] == 0 {continue}
-		if cnt != clues[12+i] {return false}
+		if cnt > 5 {
+			return false
+		}
+		if clues[12+i] == 0 {
+			continue
+		}
+		if cnt != clues[12+i] {
+			return false
+		}
 	}
 
 	return true
@@ -87,7 +110,9 @@ func seen(row []int) int {
 	used[m] = true
 	c := 1
 	for i := 1; i < 4; i++ {
-		if used[row[i]] { return 7 }
+		if used[row[i]] {
+			return 7
+		}
 		used[row[i]] = true
 		if row[i] > m {
 			m = row[i]
@@ -101,18 +126,26 @@ func next(p []int) bool {
 	n := len(p)
 	i := n - 2
 	for i >= 0 {
-		if p[i] < p[i + 1] { break}
+		if p[i] < p[i+1] {
+			break
+		}
 		i--
 	}
-	if i < 0 {return false}
+	if i < 0 {
+		return false
+	}
 	j := n - 1
 	for j > i {
-		if p[j] > p[i] {break}
+		if p[j] > p[i] {
+			break
+		}
 		j--
 	}
-	if j == i { return false}
+	if j == i {
+		return false
+	}
 	p[i], p[j] = p[j], p[i]
-	reverse(p[i + 1:])
+	reverse(p[i+1:])
 
 	return true
 }
@@ -120,11 +153,9 @@ func next(p []int) bool {
 func reverse(p []int) {
 	n := len(p)
 	for i := 0; i < n/2; i++ {
-		p[i], p[n - 1 - i] = p[n - 1 - i], p[i]
+		p[i], p[n-1-i] = p[n-1-i], p[i]
 	}
 }
-
-
 
 ////////////////////////////////////////////////////////////////
 type placement struct {
@@ -305,9 +336,6 @@ func TurnToSlice(arr [4][4]int) [][]int {
 	}
 	return result[:]
 }
-
-
-
 
 ///////////////////////////////////////////////////////////////////
 func perm(xn []int, i int, out *[][]int) {

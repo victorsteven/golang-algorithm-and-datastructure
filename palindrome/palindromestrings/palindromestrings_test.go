@@ -10,7 +10,7 @@ func TestIsPalindrome(t *testing.T) {
 
 	assert.True(t, palindromestrings.IsPalindrome("hannah"))
 	assert.True(t, palindromestrings.IsPalindrome("hanah"))
-	assert.False(t, palindromestrings.IsPalindrome("hello"))
+	assert.False(t, palindromestrings.IsPalindrome("normal_http_call"))
 	assert.True(t, palindromestrings.IsPalindrome("level"))
 
 }

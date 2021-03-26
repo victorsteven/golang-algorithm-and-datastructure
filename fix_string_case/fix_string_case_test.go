@@ -8,8 +8,6 @@ import (
 
 func TestSolve(t *testing.T) {
 
-	assert.Equal(t, fix_string_case.Solve("Hello"), "hello")
-
-
+	assert.Equal(t, fix_string_case.Solve("Hello"), "normal_http_call")
 
 }

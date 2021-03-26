@@ -13,9 +13,6 @@ package machine_learning
 //In python ACTIONS() returns a list of lambdas.
 //In Golang Actions() retruns a function slice []func(int) int
 
-
-
-
 //type Machine struct {
 //	Cmd int
 //	Mapping map[int]int
@@ -41,13 +38,11 @@ package machine_learning
 //	}
 //}
 
-
-
 type Machine struct {
-	cmd map[int]int
-	lrn map[int]bool
+	cmd    map[int]int
+	lrn    map[int]bool
 	action int
-	fnc []func(int) int
+	fnc    []func(int) int
 }
 
 //Function called to get your machine initialised
@@ -69,7 +64,9 @@ func (m *Machine) Command(cmd int, num int) int {
 		m.cmd[cmd] = 0
 	} else if !m.lrn[cmd] {
 		m.cmd[cmd]++
-		if m.cmd[cmd] == len(m.fnc) { m.cmd[cmd] = 0 } // possible infinite loop if response always fails
+		if m.cmd[cmd] == len(m.fnc) {
+			m.cmd[cmd] = 0
+		} // possible infinite loop if response always fails
 	}
 
 	i := m.cmd[cmd]

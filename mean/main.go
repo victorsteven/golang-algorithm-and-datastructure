@@ -5,7 +5,6 @@ import (
 	"math"
 )
 
-
 func main() {
 	fmt.Println(sum(10))
 
@@ -20,7 +19,7 @@ func sum(n int) float64 {
 		ans += i * i
 	}
 	//the mean:
-	mean := math.Sqrt(float64(ans/n))
+	mean := math.Sqrt(float64(ans / n))
 
 	return mean
 }

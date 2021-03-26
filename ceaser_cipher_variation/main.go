@@ -5,7 +5,6 @@ import (
 	"strings"
 )
 
-
 //In this country soldiers are poor but they need a certain level of secrecy for their communications so, though they do not know Caesar cypher, they reinvent it in the following way.
 //
 //They use ASCII, without really knowing it, but code only letters a-z and A-Z. Other characters are kept such as.
@@ -31,7 +30,6 @@ import (
 //By the way, maybe could you give them a hand to decode?
 //
 //Caesar cipher : see Wikipedia
-
 
 const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const lower = "abcdefghijklmnopqrstuvwxyz"
@@ -88,11 +86,10 @@ func Encode(s string, shift int) []string {
 	return rslt
 }
 
-
 // Decode - decode the array of strings
 func Decode(arr []string) string {
 	// your code
-	fmt.Println("Decoding:", strings.Join(arr,"|"))
+	fmt.Println("Decoding:", strings.Join(arr, "|"))
 	var result string
 	shiftVal = -(int(arr[0][1]) - int(arr[0][0]))
 	arr[0] = arr[0][2:]

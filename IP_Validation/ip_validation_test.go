@@ -8,8 +8,8 @@ import (
 
 func TestValidIP(t *testing.T) {
 
-	fixtures := []struct{
-		IP string
+	fixtures := []struct {
+		IP      string
 		IsValid bool
 	}{
 		{

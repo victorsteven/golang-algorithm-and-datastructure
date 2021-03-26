@@ -17,4 +17,3 @@ func TestLargestPower(t *testing.T) {
 
 	assert.Equal(t, LargestPower2(7), 1)
 }
-

@@ -15,7 +15,6 @@ func main() {
 0
 1`
 
-
 	//pattern := regexp.MustCompile("0(0|\n)*0")
 	pattern := regexp.MustCompile("(?m:^0(0|\n)*0)")
 
@@ -23,4 +22,3 @@ func main() {
 	fmt.Println(s)
 
 }
-

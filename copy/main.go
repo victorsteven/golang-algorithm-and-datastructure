@@ -4,8 +4,7 @@ import "fmt"
 
 func main() {
 	var s = make([]int, 3)
-	n := copy(s, []int{0,1,2,3})
-
+	n := copy(s, []int{0, 1, 2, 3})
 
 	fmt.Println(n)
 	fmt.Println("the slice: ", s)
@@ -14,7 +13,6 @@ func main() {
 	m := copy(b, "Hello world")
 	fmt.Println(m)
 	fmt.Println("the byte slice: ", string(b))
-
 
 	var s1 []int
 	s2 := []int{1, 2, 3}

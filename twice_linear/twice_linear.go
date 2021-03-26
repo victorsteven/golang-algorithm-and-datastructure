@@ -28,10 +28,10 @@ func DblLinear(n int) int {
 	var z int
 
 	for len(u) <= n {
-		y = 2 * u[i] + 1
-		z = 3 * u[j] + 1
+		y = 2*u[i] + 1
+		z = 3*u[j] + 1
 
-		if  y < z {
+		if y < z {
 			u = append(u, y)
 			i++
 		} else if y > z {
@@ -56,8 +56,8 @@ func DblLinear2(n int) int {
 
 	for i := 0; i < n; i++ {
 
-		next := 2 * u[x] + 1
-		neyt := 3 * u[y] + 1
+		next := 2*u[x] + 1
+		neyt := 3*u[y] + 1
 
 		if next <= neyt {
 			u = append(u, next)

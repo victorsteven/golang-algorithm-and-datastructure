@@ -37,7 +37,6 @@ expected worst-case time complexity is O(1);
 expected worst-case space complexity is O(1).
 */
 
-
 func FromJmp(x int, y int, d int) int {
-	return int(math.Ceil(float64(float64(y - x) / float64(d))))
+	return int(math.Ceil(float64(float64(y-x) / float64(d))))
 }

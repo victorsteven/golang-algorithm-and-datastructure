@@ -37,7 +37,6 @@ func LargestPower2(n uint64) int {
 	return int(k - 1)
 }
 
-
 //import . "math"
 //
 //func LargestPower(n uint64) int {
@@ -47,8 +46,6 @@ func LargestPower2(n uint64) int {
 //   }
 //   return int(k-1)
 //}
-
-
 
 //import "math"
 //

@@ -1,6 +1,5 @@
 package friend_cheating
 
-
 //A friend of mine takes a sequence of numbers from 1 to n (where n > 0).
 //Within that sequence, he chooses two numbers, a and b.
 //He says that the product of a and b should be equal to the sum of all numbers in the sequence, excluding a and b.
@@ -36,13 +35,12 @@ package friend_cheating
 //removNb(26) should return  **an array of pairs {{15, 21}{21, 15}}**
 //tested by way of strings.
 
-
 func RemovNb(m uint64) [][2]uint64 {
 	n := m
 	var sum uint64 = n * (n + 1) / 2
 	var res [][2]uint64
 	for a := uint64(1); a <= n; a++ {
-		if (sum - a) % (a + 1) == 0 {
+		if (sum-a)%(a+1) == 0 {
 			b := (sum - a) / (a + 1)
 			if b < n {
 				res = append(res, [2]uint64{a, b})
@@ -51,4 +49,3 @@ func RemovNb(m uint64) [][2]uint64 {
 	}
 	return res
 }
-

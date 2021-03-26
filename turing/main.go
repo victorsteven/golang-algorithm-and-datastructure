@@ -17,7 +17,6 @@ func makeSquaresInt(slice []int) {
 	}
 }
 
-
 func main() {
 	s10 := make([]int, 2, 4)
 	fmt.Printf("The print: s10=%v\n", s10)
@@ -32,8 +31,7 @@ func main() {
 
 	a := [10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 	makeSquares(a)
-	fmt.Println("the a's: ", a)  //the remain the same as the above a, i think because an array was used in its square method
-
+	fmt.Println("the a's: ", a) //the remain the same as the above a, i think because an array was used in its square method
 
 	s := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 	s = append(s[:2], s[3:]...)
@@ -50,11 +48,10 @@ func main() {
 	var sa Shape
 	sa = Rect{5.0, 4.0}
 	r := Rect{5.0, 4.0}
-	fmt.Println( sa == r) //true
+	fmt.Println(sa == r) //true
 
 	var sb Shape = Rect{10, 3}
 	fmt.Println(sb)
-
 
 	fmt.Println("main() started")
 	var wg sync.WaitGroup
@@ -90,4 +87,3 @@ func service(wg sync.WaitGroup) {
 	wg.Done()
 
 }
-

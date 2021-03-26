@@ -10,12 +10,12 @@ func main() {
 	fmt.Println(SpinWords2("this is the mainstream grand"))
 }
 
-func SpinWords(str string) string  {
+func SpinWords(str string) string {
 	ans := ""
-	for _, v := range strings.Split(str, " "){
+	for _, v := range strings.Split(str, " ") {
 		if len(v) >= 5 {
 			var c = strings.Split(v, "")
-			for i, j := 0, len(c)-1;   i < j;   i, j = i+1, j-1 {
+			for i, j := 0, len(c)-1; i < j; i, j = i+1, j-1 {
 				c[i], c[j] = c[j], c[i]
 			}
 			ans += strings.Join(c, "")
@@ -27,9 +27,9 @@ func SpinWords(str string) string  {
 	return strings.TrimSpace(ans)
 }
 
-func SpinWords2(str string) string  {
+func SpinWords2(str string) string {
 	ans := ""
-	for _, v := range strings.Split(str, " "){
+	for _, v := range strings.Split(str, " ") {
 		if len(v) >= 5 {
 			result := ""
 			for _, w := range v {

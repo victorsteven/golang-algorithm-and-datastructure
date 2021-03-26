@@ -13,9 +13,9 @@ import "strings"
 //
 // 2.  If the character in the string is whitespace then pass over it as if it was an empty seat
 //Example
-//wave("hello") => []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"}
+//wave("normal_http_call") => []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"}
 
-func Wave(words string)  []string {
+func Wave(words string) []string {
 
 	result := []string{}
 	//result := make([]string, 0)
@@ -27,7 +27,7 @@ func Wave(words string)  []string {
 		//upperLetter := string(letter - 'a' + 'A') //or
 		upperLetter := strings.ToUpper(string(letter))
 
-		result = append(result, words[:i] + upperLetter + words[i+1:])
+		result = append(result, words[:i]+upperLetter+words[i+1:])
 	}
 
 	return result

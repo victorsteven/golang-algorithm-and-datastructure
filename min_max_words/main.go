@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	fmt.Println("this is the ans low: ", FindLow("hello my name is a"))
-	fmt.Println("this is the ans high: ", FindHigh("hello my name is a"))
+	fmt.Println("this is the ans low: ", FindLow("normal_http_call my name is a"))
+	fmt.Println("this is the ans high: ", FindHigh("normal_http_call my name is a"))
 
-	low, high := FindLowHigh("hello my name is a")
+	low, high := FindLowHigh("normal_http_call my name is a")
 	fmt.Println("Lowest: ", low)
 	fmt.Println("Highest: ", high)
 }
@@ -53,7 +53,6 @@ func FindLowHigh(s string) (int, int) {
 	lowestWord := words[0]
 	highestWord := words[0]
 
-
 	for _, v := range words {
 		if len(v) < len(lowestWord) {
 			lowestWord = v
@@ -67,4 +66,3 @@ func FindLowHigh(s string) (int, int) {
 	}
 	return len(lowestWord), len(highestWord)
 }
-

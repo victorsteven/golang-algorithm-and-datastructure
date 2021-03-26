@@ -18,7 +18,7 @@ func main() {
 	//	//}
 
 	//fmt.Println(FibGen3([2]float64{1,9}, 10))
-	fmt.Println(FibGenP([2]float64{1,9}, 10))
+	fmt.Println(FibGenP([2]float64{1, 9}, 10))
 	fmt.Println(FibGenRange(10))
 
 	//arr := []int{1,2,3,4,5,6,7}
@@ -41,7 +41,7 @@ func fibGen(c chan int) {
 	a, b := 0, 1
 	for {
 		c <- a
-		a,b = b, a+b
+		a, b = b, a+b
 	}
 }
 
@@ -68,7 +68,7 @@ func Fibonacci(signature [2]float64, n int) (r []float64) {
 	r = signature[:] //since we told the array the number of elements to expect, we use [:]
 	for i := 0; i < n; i++ {
 		l := len(r)
-		r = append(r, r[l-1] + r[l-2])
+		r = append(r, r[l-1]+r[l-2])
 	}
 	return r[:n]
 }
@@ -82,7 +82,6 @@ func Fibonacci(signature [2]float64, n int) (r []float64) {
 //	}
 //	return r[:n]
 //}
-
 
 //more readable
 func FibGen3(signature [2]float64, n int) []float64 {
@@ -110,7 +109,7 @@ func FibGenP(sig [2]float64, n int) []float64 {
 }
 
 func FibGenRange(n int) []float64 {
-	result := []float64{1:1}
+	result := []float64{1: 1}
 	if n == 0 || n == 1 {
 		return result[:n]
 	}

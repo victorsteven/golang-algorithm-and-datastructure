@@ -9,13 +9,12 @@ func main() {
 	//a := []int{1,8,3,9,2}
 	//fmt.Println(sortInt(a))
 	//
-	//str := []string{"hello man", "steven", "this", "is a good piece"}
+	//str := []string{"normal_http_call man", "steven", "this", "is a good piece"}
 	//fmt.Println(sortString(str))
 
-	fmt.Println(Sort("hello"))
+	fmt.Println(Sort("normal_http_call"))
 
 }
-
 
 func sortInt(a []int) []int {
 	sort.Slice(a, func(i, j int) bool {
@@ -26,7 +25,7 @@ func sortInt(a []int) []int {
 
 //sort the sentence according to the length of the string
 func sortString(str []string) []string {
-	sort.Slice(str , func(i, j int) bool {
+	sort.Slice(str, func(i, j int) bool {
 		return len(str[i]) < len(str[j])
 	})
 	return str
@@ -46,7 +45,3 @@ func Sort(str string) string {
 	})
 	return string(runes)
 }
-
-
-
-

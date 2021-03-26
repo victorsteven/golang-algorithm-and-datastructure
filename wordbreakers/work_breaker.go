@@ -6,9 +6,8 @@ import (
 )
 
 const (
-
-	empty = ""
-	stringFormat = "%s"
+	empty                   = ""
+	stringFormat            = "%s"
 	stringSpaceStringFormat = "%s %s"
 )
 

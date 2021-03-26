@@ -40,7 +40,6 @@ import (
 //
 //"(az, toto picaro zone kiwi)(az toto, picaro zone kiwi)(az toto picaro, zone kiwi)(az toto picaro zone, kiwi)"
 
-
 func PartList(arr []string) string {
 
 	str := ""

@@ -6,7 +6,6 @@ package breaking_chocolate
 //
 //If input data is invalid you should return 0 (as in no breaks are needed if we do not have any chocolate to split). Input will always be a non-negative integer.
 
-
 func BreakChocolate(n, m int) int {
 	if n < 1 || m < 1 {
 		return 0

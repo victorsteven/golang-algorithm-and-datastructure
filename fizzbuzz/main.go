@@ -16,7 +16,7 @@ import (
 //The   FizzBuzz   problem was presented as the lowest level of comprehension required to illustrate adequacy.
 
 func main() {
-fmt.Println(fizzBuzz(15))
+	fmt.Println(fizzBuzz(15))
 }
 
 func fizzBuzz(n int) []string {

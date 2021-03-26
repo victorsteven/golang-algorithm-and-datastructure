@@ -4,7 +4,7 @@ package reversestring
 func ReverseString(text string) string {
 
 	runes := []rune(text)
-	Reverse(runes, 0, len(runes) - 1)
+	Reverse(runes, 0, len(runes)-1)
 
 	return string(runes)
 }

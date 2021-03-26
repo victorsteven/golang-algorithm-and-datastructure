@@ -11,7 +11,7 @@ func main() {
 }
 
 func absSort(arr []int) []int {
-	for i := len(arr)-1; i >= 0; i-- {
+	for i := len(arr) - 1; i >= 0; i-- {
 		for j := 1; j <= i; j++ {
 			if math.Abs(float64(arr[j-1])) > math.Abs(float64(arr[j])) {
 				temp := arr[j-1]

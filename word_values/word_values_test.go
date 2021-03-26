@@ -11,9 +11,9 @@ func TestNameValue(t *testing.T) {
 	//result := NameValue(input)
 	//assert.Equal(t, result, []int{6,12,18,24})
 
-	input2 := []string{"abc","abc abc"}
+	input2 := []string{"abc", "abc abc"}
 
 	result2 := NameValue(input2)
 
-	assert.Equal(t, result2, []int{6,24})
+	assert.Equal(t, result2, []int{6, 24})
 }

@@ -14,7 +14,6 @@ func main() {
 	fmt.Println(result)
 }
 
-
 func filterString(s string) string {
 
 	str := []string{}
@@ -25,13 +24,12 @@ func filterString(s string) string {
 				str = str[:i]
 			}
 		} else {
-			str  = append(str, string(v))
+			str = append(str, string(v))
 		}
 	}
 
 	return strings.Join(str, "")
 }
-
 
 func solution(S, T string) bool {
 	if filterString(S) != filterString(T) {

@@ -21,8 +21,6 @@ import (
 //"[(])"     =>  False
 //"[({})](]" =>  False
 
-
-
 // Resultant table:
 //day (date) [order by]
 //department_name (name of department) [order by]
@@ -44,12 +42,9 @@ import (
 //  T.LOGIN::DATE,
 //  D.NAME
 
-
-
-
 func ValidBraces(str string) bool {
 
-	for x := 0; x <= len(str) + 2; x++ {
+	for x := 0; x <= len(str)+2; x++ {
 
 		str = strings.Replace(str, "()", "", -1)
 		str = strings.Replace(str, "[]", "", -1)
@@ -79,10 +74,10 @@ func ValidBraces2(str string) bool {
 			if len(stack) == 0 {
 				return false
 			}
-			if stack[len(stack) - 1] != c {
+			if stack[len(stack)-1] != c {
 				return false
 			}
-			stack = stack[:len(stack) - 1]
+			stack = stack[:len(stack)-1]
 		}
 	}
 	return len(stack) == 0

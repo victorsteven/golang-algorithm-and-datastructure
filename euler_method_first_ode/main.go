@@ -39,26 +39,24 @@ func main() {
 }
 
 func ode(x float64, y float64) float64 {
-	return (2 - math.Exp(-4 * x) - 2 * y)
+	return (2 - math.Exp(-4*x) - 2*y)
 }
 
 func exact(x float64) float64 {
-	return (1 * 0.5 * math.Exp(-4 * x) - 0.5 * math.Exp(-2 * x))
+	return (1*0.5*math.Exp(-4*x) - 0.5*math.Exp(-2*x))
 }
 
 func ExEuler(nb int) float64 {
-	yi := 1.; xi := 0.; h := 1./float64(nb)
+	yi := 1.
+	xi := 0.
+	h := 1. / float64(nb)
 	err := 0.
 	for i := 1; i <= nb; i++ {
 		yi += ode(xi, yi) * h
 		xi += h
 		var zi = exact(xi)
-		err += math.Abs(yi - zi) /zi
+		err += math.Abs(yi-zi) / zi
 	}
-	res := err / (float64(nb) + 1. )
-	return math.Floor(res * 1e6) / 1e6
+	res := err / (float64(nb) + 1.)
+	return math.Floor(res*1e6) / 1e6
 }
-
-
-
-

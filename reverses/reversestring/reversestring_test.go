@@ -6,5 +6,5 @@ import (
 )
 
 func TestReverseString(t *testing.T) {
-	assert.Equal(t, ReverseString("hello"), "olleh")
+	assert.Equal(t, ReverseString("normal_http_call"), "olleh")
 }

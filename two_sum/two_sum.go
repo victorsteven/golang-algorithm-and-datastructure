@@ -10,11 +10,11 @@ package two_sum
 //
 //twoSum [1, 2, 3] 4 === (0, 2)
 
-func TwoSum(numbers []int, target int)  [2]int {
+func TwoSum(numbers []int, target int) [2]int {
 
 	for i := 0; i < len(numbers)-1; i++ {
-		for j := i+1; j < len(numbers); j++ {
-			if numbers[i] + numbers[j] == target {
+		for j := i + 1; j < len(numbers); j++ {
+			if numbers[i]+numbers[j] == target {
 				return [2]int{i, j}
 			}
 		}
@@ -22,12 +22,11 @@ func TwoSum(numbers []int, target int)  [2]int {
 	return [2]int{}
 }
 
-
 func TwoSum2(numbers []int, target int) [2]int {
 
 	for i, num1 := range numbers {
 		for j, num2 := range numbers {
-			if i != j && num1 + num2 == target {
+			if i != j && num1+num2 == target {
 				return [2]int{i, j}
 			}
 		}

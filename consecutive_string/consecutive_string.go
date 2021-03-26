@@ -15,7 +15,7 @@ import "strings"
 func LongestConsec(strarr []string, k int) string {
 
 	n := len(strarr)
-	if n == 0 || k > n || k <=0 {
+	if n == 0 || k > n || k <= 0 {
 		return ""
 	}
 
@@ -35,7 +35,7 @@ func LongestConsec(strarr []string, k int) string {
 
 func LongestConsec2(strarr []string, k int) string {
 	longest := ""
-	for i := 0; i < len(strarr) - k + 1; i++ {
+	for i := 0; i < len(strarr)-k+1; i++ {
 		joined := strings.Join(strarr[i:i+k], "")
 		if len(joined) > len(longest) {
 			longest = joined
@@ -43,4 +43,3 @@ func LongestConsec2(strarr []string, k int) string {
 	}
 	return longest
 }
-

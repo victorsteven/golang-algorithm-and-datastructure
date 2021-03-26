@@ -23,7 +23,6 @@ import (
 //factorial can be a very big number (4000! has 12674 digits, n will go from 300 to 4000).
 //In Fortran - as in any other language - the returned string is not permitted to contain any redundant trailing whitespace: you can use dynamically allocated character strings.
 
-
 func Decomp(n int) string {
 
 	//THIS WORKS FOR SMALL NUMBERS
@@ -63,7 +62,6 @@ func Decomp(n int) string {
 	//}
 	//return strings.Join(result, " * ")
 
-
 	//FOR BIG NUMBERS
 	primeList := []int{}
 	primesTable := map[int]int{}
@@ -75,7 +73,7 @@ func Decomp(n int) string {
 		} else {
 			var temp = i
 			for j := range primesTable {
-				for temp % j == 0 {
+				for temp%j == 0 {
 					primesTable[j]++
 					temp /= j
 				}
@@ -119,20 +117,11 @@ func getFactorialInt(n int) int {
 //	return ans
 //}
 
-
 func isPrime(n int) bool {
 	for i := 2; i < n; i++ {
-		if n % i == 0 {
+		if n%i == 0 {
 			return false
 		}
 	}
 	return true
 }
-
-
-
-
-
-
-
-

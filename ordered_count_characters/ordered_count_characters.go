@@ -16,10 +16,9 @@ import (
 //    Count int
 //}
 
-
 type Tuple struct {
-   Char  rune
-   Count int
+	Char  rune
+	Count int
 }
 
 func OrderedCount(text string) (tups []Tuple) {
@@ -55,5 +54,3 @@ func OrderedCount2(text string) (tups []Tuple) {
 	}
 	return tups
 }
-
-

@@ -25,7 +25,6 @@ import (
 //
 //Given numbers will always be positive.
 
-
 func FacsString2Dec(str string) int {
 	response := 0
 	step := len(str)
@@ -33,7 +32,7 @@ func FacsString2Dec(str string) int {
 
 	for step > 0 {
 		rest, _ := strconv.ParseInt(string(str[iter]), 16, 10)
-		response = response * step + int(rest)
+		response = response*step + int(rest)
 		step--
 		iter++
 	}
@@ -53,7 +52,6 @@ func Dec2FactString(nb int) string {
 	}
 	return strings.ToUpper(response)
 }
-
 
 //func Dec2FactString(nb int) string {
 //	var alphabet []string = strings.Split("0123456789ABCDEFGHIGKLMNOPQRSTUWXYZ", "")

@@ -53,7 +53,6 @@ import "fmt"
 //	fmt.Println(ans2)
 //}
 
-
 func ProductFib(prod uint64) [3]uint64 {
 	// your code
 	f1 := uint64(0)
@@ -61,15 +60,14 @@ func ProductFib(prod uint64) [3]uint64 {
 
 	fmt.Println("initial f1 and f2: ", f1, f2)
 
-	for f1 * f2 < prod {
-		f1, f2 = f2, f1 + f2
+	for f1*f2 < prod {
+		f1, f2 = f2, f1+f2
 	}
 	success := uint64(0)
-	if prod == f1 * f2 {
+	if prod == f1*f2 {
 		success = 1
 	}
 
 	return [3]uint64{f1, f2, success}
 
 }
-

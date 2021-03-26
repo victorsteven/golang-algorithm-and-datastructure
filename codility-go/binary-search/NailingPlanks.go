@@ -1,6 +1,5 @@
 package binary_search
 
-
 /*
 You are given two non-empty arrays A and B consisting of N integers. These arrays represent N planks. More precisely, A[K] is the start and B[K] the end of the K−th plank.
 
@@ -76,10 +75,10 @@ func Solution(a []int, b []int, c []int) int {
 
 	total := -1
 
-	maxCoord := m * 2 + 1
+	maxCoord := m*2 + 1
 	nailed := make([]int, maxCoord)
 
-	for ; minNails <= maxNails ; {
+	for minNails <= maxNails {
 		missing = false
 		mid = (maxNails + minNails) / 2
 
@@ -92,11 +91,11 @@ func Solution(a []int, b []int, c []int) int {
 		}
 
 		for i := 1; i < maxCoord; i++ {
-			nailed[i] = nailed[i] + nailed[i - 1]
+			nailed[i] = nailed[i] + nailed[i-1]
 		}
 
 		for i := 0; i < n; i++ {
-			if nailed[a[i] - 1] == nailed[b[i]] {
+			if nailed[a[i]-1] == nailed[b[i]] {
 				missing = true
 			}
 		}
@@ -111,4 +110,3 @@ func Solution(a []int, b []int, c []int) int {
 	return total
 
 }
-

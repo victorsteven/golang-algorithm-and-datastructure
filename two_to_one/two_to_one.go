@@ -17,7 +17,6 @@ import (
 //a = "abcdefghijklmnopqrstuvwxyz"
 //longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
-
 func distinct(s string) string {
 
 	dis := make(map[rune]bool)

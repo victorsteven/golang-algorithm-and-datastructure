@@ -2,7 +2,6 @@ package main
 
 import "strings"
 
-
 //The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places up or down the alphabet.
 //
 //This program performs a variation of the Caesar shift. The shift increases by 1 for each character (on each iteration).
@@ -48,8 +47,6 @@ func main() {
 
 }
 
-
-
 func charShift(c byte, step int) int {
 	switch {
 	case c >= 'A' && c <= 'Z':
@@ -89,7 +86,7 @@ func MovingShift(s string, shift int) (ret []string) {
 
 func DemovingShift(arr []string, shift int) (ret string) {
 	s := strings.Join(arr, "")
-	for i, step := 0, shift; i < len(s); i, step = i + 1, step + 1 {
+	for i, step := 0, shift; i < len(s); i, step = i+1, step+1 {
 		ret += string(charShift(s[i], -step))
 	}
 	return

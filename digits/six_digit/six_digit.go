@@ -6,7 +6,6 @@ package main
 //
 //Any help would be greatly appreciated!
 
-
 /////////////////
 //func IntToSlice(n int64, sequence []int64) []int64 {
 //	if n != 0 {

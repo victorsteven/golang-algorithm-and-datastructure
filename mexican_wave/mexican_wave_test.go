@@ -7,8 +7,7 @@ import (
 
 func TestWave(t *testing.T) {
 
-
-	assert.Equal(t, Wave("hello"), []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"})
+	assert.Equal(t, Wave("normal_http_call"), []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"})
 
 	assert.Equal(t, Wave(" x yz"), []string{" X yz", " x Yz", " x yZ"})
 

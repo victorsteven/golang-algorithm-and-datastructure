@@ -48,9 +48,6 @@ func max_subarray_2(numbers []int) int {
 	return max
 }
 
-
-
-
 //Return both the filtered array
 func max_subarray_plus(numbers []int) ([]int, int) {
 

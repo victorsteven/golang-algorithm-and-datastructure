@@ -99,7 +99,6 @@
 //
 //}
 
-
 //package main
 //
 //
@@ -123,7 +122,6 @@
 //
 //}
 
-
 //package main
 //
 //
@@ -145,8 +143,6 @@
 //	fmt.Printf("Length of channel c is %v and capacity of channel c is %v", len(c), cap(c))
 //
 //}
-
-
 
 //package main
 //
@@ -199,8 +195,6 @@
 //	fmt.Print( runtime.NumGoroutine())
 //
 //}
-
-
 
 //package main
 //
@@ -280,10 +274,6 @@
 //	}
 //
 //}
-
-
-
-
 
 //package main
 //
@@ -421,7 +411,6 @@
 //
 //}
 
-
 //package main
 //
 //
@@ -453,7 +442,6 @@
 //	}
 //
 //}
-
 
 //package main
 //
@@ -489,14 +477,11 @@
 //
 //}
 
-
 //package main
 //
 //
 //
 //const N = 10
-
-
 
 //func main() {
 //
@@ -532,10 +517,6 @@
 //
 //}
 
-
-
-
-
 //package main
 //
 //func main() {
@@ -563,8 +544,6 @@
 //print(string(*pb))
 //
 //}
-
-
 
 //package main
 //
@@ -616,9 +595,6 @@
 //
 //Which of the following is the correct way to fix this issue so that the program avoids the "concurrent map writes" error?
 
-
-
-
 //package main
 //
 //
@@ -628,7 +604,6 @@
 //	name string
 //
 //}
-
 
 //
 //func main() {
@@ -640,7 +615,6 @@
 //	fmt.println(m[“x”))
 //
 //}
-
 
 //package main
 //
@@ -671,7 +645,6 @@
 //
 //}
 
-
 //package main
 //
 //import "fmt"
@@ -701,7 +674,6 @@
 //	fmt.Println(s)
 //
 //}
-
 
 //package main
 //
@@ -740,7 +712,6 @@
 //	fmt.Println(y)
 //
 //}
-
 
 //package main
 //
@@ -793,8 +764,6 @@
 //}
 
 package main
-
-
 
 import "fmt"
 

@@ -46,7 +46,7 @@ func PerMissingElem(A []int) int {
 
 	n := len(A) + 1
 	arraySum := 0
-	totalSum := (n+1) * n / 2
+	totalSum := (n + 1) * n / 2
 
 	for _, value := range A {
 		arraySum += value
@@ -55,7 +55,6 @@ func PerMissingElem(A []int) int {
 	return totalSum - arraySum
 
 }
-
 
 func mine(A []int) int {
 
@@ -92,5 +91,3 @@ func mine(A []int) int {
 //
 //return x
 //}
-
-

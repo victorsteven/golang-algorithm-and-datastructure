@@ -12,23 +12,23 @@ func TestSolution1(t *testing.T) {
 	//	str string
 	//	result string
 	//}{
-		//6A4D5F2S2W is just one arrangement, so we cant assert for it alone.
-		//{
-		//	"AAAADDFFFAAFFDDSSWW",
-		//	"6A4D5F2S2W",
-		//},
+	//6A4D5F2S2W is just one arrangement, so we cant assert for it alone.
+	//{
+	//	"AAAADDFFFAAFFDDSSWW",
+	//	"6A4D5F2S2W",
+	//},
 
-		//the ans can either be 62W5B or 5B62W,
-		//{
-		//	"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW",
-		//	"62W5B",
-		//},
+	//the ans can either be 62W5B or 5B62W,
+	//{
+	//	"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW",
+	//	"62W5B",
+	//},
 
-		//ABC is just one arrangement, but we cant assert for it alone
-		//{
-		//	"ABC",
-		//	"ABC",
-		//},
+	//ABC is just one arrangement, but we cant assert for it alone
+	//{
+	//	"ABC",
+	//	"ABC",
+	//},
 	//}
 
 	//for _, v := range sample {

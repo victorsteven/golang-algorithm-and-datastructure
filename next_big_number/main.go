@@ -11,7 +11,6 @@ import (
 //513 ==> 531
 //2017 ==> 2071
 
-
 func main() {
 
 	fmt.Println(NextBigger(3452))
@@ -21,7 +20,7 @@ func main() {
 func intToSlice(n int) []int {
 	var numb []int
 	for n > 0 {
-		numb = append(numb, n % 10)
+		numb = append(numb, n%10)
 		n /= 10
 	}
 	return numb
@@ -40,7 +39,7 @@ func NextBigger(n int) int {
 	numb := intToSlice(n)
 	i := 0
 	for i := 0; i < len(numb); i++ {
-		if numb[i] > numb[i + 1] {
+		if numb[i] > numb[i+1] {
 			break
 		}
 	}
@@ -50,14 +49,14 @@ func NextBigger(n int) int {
 
 	mn := i
 	for j := 0; j < i; j++ {
-		if numb[j] > numb[i + 1] {
+		if numb[j] > numb[i+1] {
 			mn = j
 		}
 	}
-	numb[mn], numb[i + 1] = numb[i + 1], numb[mn]
-	tmp := numb[:i + 1]
+	numb[mn], numb[i+1] = numb[i+1], numb[mn]
+	tmp := numb[:i+1]
 	//fmt.Println("the temp: ", tmp)
-	sort.Slice(tmp, func(i,j int) bool {
+	sort.Slice(tmp, func(i, j int) bool {
 		return tmp[i] > tmp[j]
 	})
 	return sliceToInt(numb)
@@ -92,7 +91,7 @@ func NextBigger(n int) int {
 
 func countDigit(i int) (count int) {
 	for i != 0 {
-		i = i /10
+		i = i / 10
 		fmt.Println(i)
 		//i /= 10
 		count++

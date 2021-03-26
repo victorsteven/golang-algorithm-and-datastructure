@@ -3,10 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	A := []int{20,2,16,4,6,7,34,2,9,15,5}
+	A := []int{20, 2, 16, 4, 6, 7, 34, 2, 9, 15, 5}
 	fmt.Println(max_num(A))
 }
-
 
 func max_num(arr []int) int {
 

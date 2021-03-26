@@ -17,7 +17,7 @@ func IsPalindrome(text string) bool {
 
 	//runes := []rune(text)
 	length := len(text)
-	for i, j := 0, length - 1; i < length/2; i, j = i + 1, j - 1 {
+	for i, j := 0, length-1; i < length/2; i, j = i+1, j-1 {
 		if string(text[i]) != string(text[j]) {
 			return false
 		}

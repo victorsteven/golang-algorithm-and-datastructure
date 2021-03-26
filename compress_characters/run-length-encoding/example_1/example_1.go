@@ -11,10 +11,7 @@ import (
 
 //Output: 12W1B12W3B24W1B14W
 
-
 //This deifference between this and example 2 is that for single values, add the 1 in from of the character
-
-
 
 func Solution1(str string) string {
 
@@ -29,7 +26,7 @@ func Solution1(str string) string {
 		count = 1
 
 		//now check how many times each character occur:
-		for i + 1 < len(str) && string(str[i]) == string(str[i + 1]) {
+		for i+1 < len(str) && string(str[i]) == string(str[i+1]) {
 			count++
 			i++
 		}
@@ -50,7 +47,7 @@ func Solution2(str string) string {
 	result := ""
 
 	for _, v := range strings.Split(str[1:], "") {
-		if prev  == v {
+		if prev == v {
 			count++
 		} else {
 			result += fmt.Sprintf("%d%s", count, prev)

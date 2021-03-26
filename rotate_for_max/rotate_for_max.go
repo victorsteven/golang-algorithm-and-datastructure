@@ -61,7 +61,7 @@ func MaxRot2(n int64) (max int64) {
 	for index := range strn[:len(strn)-1] {
 
 		left = strn[:index]
-		middle = strn[index:index+1]
+		middle = strn[index : index+1]
 		right = strn[index+1:]
 
 		fmt.Println("initial left, middle and right: ", left, middle, right)
@@ -76,7 +76,6 @@ func MaxRot2(n int64) (max int64) {
 	}
 	return
 }
-
 
 //func MaxRot(n int64) int64 {
 //	e := fmt.Sprint(n)

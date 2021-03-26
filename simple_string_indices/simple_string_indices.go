@@ -45,8 +45,10 @@ func Solution2(s string, i uint) (uint, error) {
 		open := 0
 		for ; int(i) < len(s); i++ {
 			switch s[i] {
-			case '(': open++
-			case ')': open--
+			case '(':
+				open++
+			case ')':
+				open--
 			}
 			if open == 0 {
 				return i, nil

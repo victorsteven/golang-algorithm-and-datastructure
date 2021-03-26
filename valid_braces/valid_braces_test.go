@@ -17,8 +17,4 @@ func TestValidBraces(t *testing.T) {
 	//
 	//assert.Equal(t, ValidBraces("[({})](]"), false)
 
-
-
 }
-
-

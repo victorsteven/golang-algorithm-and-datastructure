@@ -14,13 +14,13 @@ import "fmt"
 func main() {
 	//fmt.Println(Tribonacci([3]float64{1,1,1}, 2))
 	//fmt.Println(Tribonacci2([]float64{1,1,1}, 10))
-	fmt.Println(Tribonacci3([3]float64{1,1,1}, 2))
+	fmt.Println(Tribonacci3([3]float64{1, 1, 1}, 2))
 }
 func Tribonacci(signature [3]float64, n int) (r []float64) {
 	r = signature[:]
 	for i := 0; i < n; i++ {
 		l := len(r)
-		r = append(r, r[l-1] + r[l-2] + r[l-3])
+		r = append(r, r[l-1]+r[l-2]+r[l-3])
 	}
 	return r[:n]
 }
@@ -34,7 +34,6 @@ func Tribonacci(signature [3]float64, n int) (r []float64) {
 //	return r[:n]
 //}
 
-
 //more readable
 func Tribonacci3(signature [3]float64, n int) []float64 {
 	result := signature[:]
@@ -47,4 +46,3 @@ func Tribonacci3(signature [3]float64, n int) []float64 {
 	}
 	return result
 }
-

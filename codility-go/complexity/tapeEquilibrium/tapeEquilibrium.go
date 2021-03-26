@@ -53,7 +53,7 @@ expected worst-case space complexity is O(N), beyond input storage (not counting
 
 func TapeEquilibrium(A []int) int {
 	arraySum := 0
-	currentMin := 1 << 32 - 1
+	currentMin := 1<<32 - 1
 
 	for _, value := range A {
 		arraySum += value

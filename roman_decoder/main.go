@@ -19,7 +19,7 @@ var ROMAN = map[rune]int{
 	'M': 1000,
 }
 
-func  Decode(roman string) int {
+func Decode(roman string) int {
 	result := 0
 	last_digit := 1000
 	for _, v := range roman {

@@ -43,7 +43,6 @@ import (
 //
 //Forthcoming katas will study other transformations.
 
-
 func main() {
 	str := "abcdef"
 	fmt.Println("the original: ", str)
@@ -101,10 +100,10 @@ func HorMirror(s string) string {
 }
 
 type FParam func(string) string
+
 func Oper(f FParam, x string) string {
 	return f(x)
 }
-
 
 ///////////////////////////////////////////
 func revstring(s string) string {
@@ -115,7 +114,7 @@ func revstring(s string) string {
 	}
 	return string(u)
 }
-func revarray(s [] string) [] string {
+func revarray(s []string) []string {
 	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
 		s[i], s[j] = s[j], s[i]
 	}
@@ -134,7 +133,6 @@ func HorMirror2(s string) string {
 	revarray(arr)
 	return strings.Join(arr, "\n")
 }
-
 
 ////////////////////////////////////////////////
 func VertMirror3(s string) string {

@@ -45,13 +45,12 @@ func DigPow(n, p int) int {
 		p++
 	}
 
-	if arrSum % n == 0 {
+	if arrSum%n == 0 {
 		return arrSum / n
 	} else {
 		return -1
 	}
 }
-
 
 func main() {
 	fmt.Println(DigPow(46288, 3))
@@ -59,7 +58,6 @@ func main() {
 	fmt.Println(DigPow(92, 1))
 	fmt.Println(DigPow(695, 2))
 }
-
 
 //func DigPowa(n, p int) int {
 //	var sum int = 0

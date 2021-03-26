@@ -34,7 +34,7 @@ func main() {
 	//fmt.Println(getDivisorSum(100))
 	//fmt.Println(sumPropDiv(100))
 
-	A := []int{5,3,1,9,2,5,6,3,2}
+	A := []int{5, 3, 1, 9, 2, 5, 6, 3, 2}
 	fmt.Println(bubble(A))
 	fmt.Println(remove_dup(A))
 	fmt.Println(largest_num(A))
@@ -44,16 +44,10 @@ func main() {
 
 	fmt.Println(fib(9))
 
-
-
-
 	//fmt.Println(array_sort(A))
 
 	//B := []int{5,3,1,9,2,5,6,3,2}
 	//fmt.Println("The sort: ", array_sort(B))
-
-
-
 
 }
 
@@ -75,13 +69,12 @@ func getDivisorSum(n int) int {
 	}
 	sum := 0
 	for i := 1; i < n; i++ {
-		if n % i == 0 {
+		if n%i == 0 {
 			sum += i
 		}
 	}
 	return sum
 }
-
 
 func Buddy(start, limit int) []int {
 	for n := start; n <= limit; n++ {
@@ -104,10 +97,8 @@ func sumPropDiv(num int) (sum int) {
 	return
 }
 
-
-
-func bubble(a []int) []int  {
-	for i := len(a)-1; i >= 0; i-- {
+func bubble(a []int) []int {
+	for i := len(a) - 1; i >= 0; i-- {
 		for j := 1; j <= i; j++ {
 			if a[j-1] > a[j] {
 				temp := a[j-1]
@@ -167,8 +158,7 @@ func rightAngle(n int) {
 	}
 }
 
-
-func fib(n int) int  {
+func fib(n int) int {
 	if n < 2 {
 		return n
 	}

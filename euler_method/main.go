@@ -11,7 +11,7 @@ func main() {
 	tempObject := 100.
 	fcr := newCoolingRateDy(k, tempRoom)
 	analytic := newTempFunc(k, tempRoom, tempObject)
-	for _, deltaTime := range []float64{2,5,10} {
+	for _, deltaTime := range []float64{2, 5, 10} {
 		fmt.Printf("Step size = %.1f\n", deltaTime)
 		fmt.Println(" Time Euler's Analytic")
 		temp := tempObject
@@ -23,17 +23,18 @@ func main() {
 	}
 
 }
+
 //fdy is a type for function f used in Euler's method
 type fdy func(float64, float64) float64
 
 //eulerStep computes a single new value using Euler's method
 func eulerStep(f fdy, x, y, h float64) float64 {
-	return y + h * f(x, y)
+	return y + h*f(x, y)
 }
 
 //newTempFunc returns a funtion that computes the analytical cooling rate
 //for a given cooling rate constant k
-func  newCoolingRate(k float64) func(float64) float64 {
+func newCoolingRate(k float64) func(float64) float64 {
 	return func(deltaTemp float64) float64 {
 		return -k * deltaTemp
 	}
@@ -42,7 +43,7 @@ func  newCoolingRate(k float64) func(float64) float64 {
 //newTempFunc returns a function that computes the analytical solution of cooling rate integrated over time
 func newTempFunc(k, ambientTemp, initialTemp float64) func(float64) float64 {
 	return func(time float64) float64 {
-		return ambientTemp + (initialTemp - ambientTemp) * math.Exp(-k * time)
+		return ambientTemp + (initialTemp-ambientTemp)*math.Exp(-k*time)
 	}
 }
 

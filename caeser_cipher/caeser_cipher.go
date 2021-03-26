@@ -58,7 +58,6 @@ import "math"
 //	return Cipher(text, +1)
 //}
 
-
 func Cipher(text string, direction int) string {
 
 	//shift is the number of letters to move to right or left
@@ -67,23 +66,23 @@ func Cipher(text string, direction int) string {
 	//note, the shift should only be positive numbers
 	shift, offset := rune(math.Abs(float64(direction))), rune(26)
 
-	runes  := []rune(text)
+	runes := []rune(text)
 
 	for i, char := range runes {
 		//if the letter is not in the range [1..25], the offset defined above is added or subsctracted.
 
-		switch  {
+		switch {
 
 		case direction < 0:
-			if char >= 'a' + shift && char <= 'z' || char >= 'A' + shift && char <= 'Z' {
+			if char >= 'a'+shift && char <= 'z' || char >= 'A'+shift && char <= 'Z' {
 				char = char - shift
-			} else if char >= 'a' && char < 'a' + shift || char >= 'A' && char < 'A' + shift {
+			} else if char >= 'a' && char < 'a'+shift || char >= 'A' && char < 'A'+shift {
 				char = char - shift + offset
 			}
 		case direction > 0:
-			if char >= 'a' && char <= 'z' - shift || char >= 'A' && char <= 'Z' - shift {
+			if char >= 'a' && char <= 'z'-shift || char >= 'A' && char <= 'Z'-shift {
 				char = char + shift
-			} else if char > 'z' - shift && char <= 'z' || char > 'Z' - shift && char <= 'Z' {
+			} else if char > 'z'-shift && char <= 'z' || char > 'Z'-shift && char <= 'Z' {
 				char = char + shift - offset
 			}
 		}
@@ -92,4 +91,3 @@ func Cipher(text string, direction int) string {
 	}
 	return string(runes)
 }
-

@@ -28,9 +28,8 @@ package smallest_possible_sum
 //Additional notes:
 //There are performance tests consisted of very big numbers and arrays of size at least 30000. Please write an efficient algorithm to prevent timeout.
 
-
 func Solution(ar []int) int {
-	result := ar[len(ar) - 1]
+	result := ar[len(ar)-1]
 
 	for i := len(ar) - 2; i >= 0; i-- {
 		result = gcd(ar[i], result)
@@ -38,11 +37,9 @@ func Solution(ar []int) int {
 	return result * len(ar)
 }
 
-
 func gcd(x, y int) int {
 	for y != 0 {
-		x, y = y, x % y
+		x, y = y, x%y
 	}
 	return x
 }
-

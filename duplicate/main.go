@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(unique([]int{1,2,3,5,5,3,2,5}))
-	fmt.Println(removeDup([]int{1,2,3,5,5,3,2,5}))
+	fmt.Println(unique([]int{1, 2, 3, 5, 5, 3, 2, 5}))
+	fmt.Println(removeDup([]int{1, 2, 3, 5, 5, 3, 2, 5}))
 
 }
 
@@ -20,7 +20,7 @@ func unique(intSlice []int) []int {
 	return list
 }
 
-func removeDup(intSlice []int) []int  {
+func removeDup(intSlice []int) []int {
 	var list []int
 	keys := make(map[int]bool)
 	for _, v := range intSlice {
@@ -31,21 +31,3 @@ func removeDup(intSlice []int) []int  {
 	}
 	return list
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

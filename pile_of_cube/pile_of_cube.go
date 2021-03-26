@@ -25,8 +25,8 @@ func FindNb(m int) int {
 
 func FindNb2(m int) int {
 	sum := 0
-	for i := 1;; i++ {
-		sum += i*i*i
+	for i := 1; ; i++ {
+		sum += i * i * i
 		if sum == m {
 			return i
 		} else if sum > m {

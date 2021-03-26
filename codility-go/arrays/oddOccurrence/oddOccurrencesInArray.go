@@ -53,5 +53,5 @@ func OddOccurrence(A []int) (oddOne int) {
 }
 
 func isOdd(n int) bool {
-	return n % 2 == 1
+	return n%2 == 1
 }

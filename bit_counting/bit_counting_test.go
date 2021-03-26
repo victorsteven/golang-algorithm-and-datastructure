@@ -10,6 +10,3 @@ func TestCountBits(t *testing.T) {
 
 	assert.Equal(t, bit_counting.CountBits(1234), 5)
 }
-
-
-

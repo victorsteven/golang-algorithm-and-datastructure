@@ -24,7 +24,6 @@ import (
 //123.045.067.089
 //Note that leading zeros (e.g. 01.02.03.04) are considered invalid.
 
-
 func split(value string, separator string) []string {
 
 	var parts []string
@@ -82,6 +81,3 @@ func Is_valid_ip2(ip string) bool {
 
 	return fmt.Sprintf("%d.%d.%d.%d", ip_struct[0], ip_struct[1], ip_struct[2], ip_struct[3]) == ip
 }
-
-
-

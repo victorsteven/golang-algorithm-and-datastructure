@@ -1,4 +1,5 @@
 package main
+
 import (
 	"fmt"
 	"strconv"
@@ -6,14 +7,14 @@ import (
 )
 
 func main() {
-	A := []int{1,2,4,5,9,2,9,1}
+	A := []int{1, 2, 4, 5, 9, 2, 9, 1}
 	fmt.Println("The sort: ", array_sort(A))
 	fmt.Println("The unique: ", remove_duplicate(A))
 	fmt.Println("highest: ", higest_num(A))
 	fmt.Println("lowest: ", lowest_num(A))
 	fmt.Println("lowest: ", reverse(A))
 
-	B := []int{2,3,4,6,8,10}
+	B := []int{2, 3, 4, 6, 8, 10}
 	fmt.Println("lowest: ", FindOutlier(B))
 
 	starsTriangleForward(5)
@@ -26,16 +27,14 @@ func main() {
 	fmt.Println("The fibonacci: ", fib(6))
 	fmt.Println("The prime_factors: ", prime_factors(6))
 
-
-
-	fmt.Println("shortest word: ", shortestWord("hello my a name isdfs assdf"))
+	fmt.Println("shortest word: ", shortestWord("normal_http_call my a name isdfs assdf"))
 
 	fmt.Println(string_ending("abc", "c"))
 
 	fmt.Println("This is the lcs: ", LCS("AGGTAB", "GXTXAYB"))
 
-	fmt.Println(Tribonacci([3]float64{1,1,1}, 10))
-	fmt.Println(Fibonacci([2]float64{1,1}, 10))
+	fmt.Println(Tribonacci([3]float64{1, 1, 1}, 10))
+	fmt.Println(Fibonacci([2]float64{1, 1}, 10))
 	fmt.Println(print_error("aaaxbbbbyyhwawiwjjjwwm"))
 
 	var b = []string{"BBAR 150", "CDXE 515", "BKWR 250", "BTSQ 890", "DRTY 600"}
@@ -44,17 +43,15 @@ func main() {
 
 	fmt.Println(decodeMorse(".... . -.--   .--- ..- -.. ."))
 
-
-
 	fmt.Println(morse(".... . -.--   .--- ..- -.. ."))
 
 }
 
 func array_sort(arr []int) []int {
 
-	for i := len(arr)-1; i >= 0; i-- {
+	for i := len(arr) - 1; i >= 0; i-- {
 		for j := 1; j <= i; j++ {
-			if arr[j -1] > arr[j] {
+			if arr[j-1] > arr[j] {
 				temp := arr[j-1]
 				arr[j-1] = arr[j]
 				arr[j] = temp
@@ -79,7 +76,7 @@ func remove_duplicate(arr []int) []int {
 }
 
 func higest_num(arr []int) int {
-	max:= arr[0]
+	max := arr[0]
 	for _, v := range arr {
 		if v > max {
 			max = v
@@ -89,7 +86,7 @@ func higest_num(arr []int) int {
 }
 
 func lowest_num(arr []int) int {
-	low:= arr[0]
+	low := arr[0]
 	for _, v := range arr {
 		if v < low {
 			low = v
@@ -115,7 +112,7 @@ func FindOutlier(arr []int) int {
 	outlier := 0
 
 	for _, v := range arr {
-		if v % 2== 0 {
+		if v%2 == 0 {
 			even_arr = append(even_arr, v)
 		} else {
 			odd_arr = append(odd_arr, v)
@@ -185,7 +182,7 @@ func alphabetCont(n int) {
 	}
 }
 
-func startAgain(n int){
+func startAgain(n int) {
 	for i := 0; i < n; i++ {
 		for j := 0; j <= i; j++ {
 			fmt.Print("* ")
@@ -198,7 +195,7 @@ func fac(n int) int {
 	if n < 2 {
 		return 1
 	}
-	return  n * fac(n-1)
+	return n * fac(n-1)
 }
 
 func fib(n int) int {
@@ -212,7 +209,7 @@ func prime_factors(n int) []int {
 	divisor := 2
 	var factors []int
 	for n > 1 {
-		if n % divisor == 0 {
+		if n%divisor == 0 {
 			factors = append(factors, divisor)
 			n /= divisor
 		} else {
@@ -222,6 +219,19 @@ func prime_factors(n int) []int {
 	return factors
 }
 
+func prime_factors2(n int) []int {
+	divisor := 2
+	var factors []int
+	for n > 1 {
+		if n%divisor == 0 {
+			factors = append(factors, divisor)
+			n = n % divisor
+		} else {
+			divisor++
+		}
+	}
+	return factors
+}
 
 //shortest word:
 func shortestWord(s string) int {
@@ -253,7 +263,7 @@ func LCS(s1, s2 string) string {
 	m := len(s1)
 	n := len(s2)
 
-	if m ==0 || n == 0 {
+	if m == 0 || n == 0 {
 		return ""
 	} else if s1[m-1] == s2[n-1] {
 		return LCS(s1[:m-1], s2[:n-1]) + string(s1[m-1])

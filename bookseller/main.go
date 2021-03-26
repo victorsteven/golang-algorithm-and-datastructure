@@ -37,4 +37,3 @@ func StockList(listArt []string, listCat []string) string {
 	}
 	return result
 }
-

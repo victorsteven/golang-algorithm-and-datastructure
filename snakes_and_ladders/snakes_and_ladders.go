@@ -29,7 +29,7 @@ var m = map[int]int{2: 38, 7: 14, 8: 31, 15: 26, 16: 6, 21: 42, 28: 84, 36: 44, 
 type SnakesLadders struct {
 	// Define Game Struct
 	player [2]int
-	turn int
+	turn   int
 }
 
 // NewGame - Method that starts a new game for the SnakesLadders struct
@@ -49,7 +49,7 @@ func (g *SnakesLadders) Play(die1, die2 int) string {
 	pos := g.player[g.turn] + die1 + die2
 
 	if pos > 100 {
-		pos = 100 - pos % 100
+		pos = 100 - pos%100
 	}
 
 	if m[pos] != 0 {
@@ -58,10 +58,10 @@ func (g *SnakesLadders) Play(die1, die2 int) string {
 
 	g.player[g.turn] = pos
 
-	s := fmt.Sprintf("Player %d is on square %d", g.turn + 1, pos)
+	s := fmt.Sprintf("Player %d is on square %d", g.turn+1, pos)
 
 	if pos == 100 {
-		s = fmt.Sprintf("Player %d wins!", g.turn + 1)
+		s = fmt.Sprintf("Player %d wins!", g.turn+1)
 		g.turn = -1
 	} else {
 		if die1 != die2 {
@@ -75,5 +75,3 @@ func (g *SnakesLadders) Play(die1, die2 int) string {
 //    It( fmt.Sprintf("Testing Roll with (%v, %v) to obtain \"%v\"",1, 5,"Player 1 is on square 44"),func() {Expect(game.Play(1, 5)).To(Equal("Player 1 is on square 44"))} )
 //    It( fmt.Sprintf("Testing Roll with (%v, %v) to obtain \"%v\"",6, 2,"Player 2 is on square 31"),func() {Expect(game.Play(6, 2)).To(Equal("Player 2 is on square 31"))} )
 //    It( fmt.Sprintf("Testing Roll with (%v, %v) to obtain \"%v\"",1, 1,"Player 1 is on square 25"),func() {Expect(game.Play(1, 1)).To(Equal("Player 1 is on square 25"))} )
-
-

@@ -34,7 +34,7 @@ func main() {
 	a := []int{6, 5, 4, 3, 2, 1}
 	fmt.Println(reverse(a))
 
-	sentence := "This is the man that shouted hello and the bro turned to him. Awesome bro how are you, the man asked. The boy replied hello"
+	sentence := "This is the man that shouted normal_http_call and the bro turned to him. Awesome bro how are you, the man asked. The boy replied normal_http_call"
 
 	fmt.Println(countWords(sentence))
 
@@ -54,7 +54,7 @@ func main() {
 	usingScanner()
 
 	fmt.Println()
-	fmt.Println(arrayJoin([]int{1,2,3,4}, []int{5,6,7,8}))
+	fmt.Println(arrayJoin([]int{1, 2, 3, 4}, []int{5, 6, 7, 8}))
 
 	fmt.Println()
 	Inter()
@@ -91,7 +91,7 @@ func countWords(s string) int {
 	w := strings.Split(s, " ")
 	for _, v := range w {
 		switch v {
-		case "hello", "bro":
+		case "normal_http_call", "bro":
 			count++
 		}
 	}
@@ -183,7 +183,6 @@ four
 	//fmt.Print(text)
 	os.Stdout.Write(text)
 }
-
 
 func arrayJoin(arr1, arr2 []int) []int {
 	arr1 = append(arr1, arr2...)

@@ -18,7 +18,7 @@ func main() {
 				"Stanley", []mine{
 					{
 						"Gozie",
-						 nil,
+						nil,
 					},
 					{
 						"Mark",
@@ -39,6 +39,6 @@ func main() {
 }
 
 type mine struct {
-	Name  string
+	Name     string
 	Children []mine
 }

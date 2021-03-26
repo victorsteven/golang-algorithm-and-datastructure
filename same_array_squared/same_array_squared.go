@@ -42,7 +42,7 @@ func Comp(array1 []int, array2 []int) bool {
 	squaredArray1 := []int{}
 
 	for _, v := range array1 {
-		squaredArray1 = append(squaredArray1, v * v)
+		squaredArray1 = append(squaredArray1, v*v)
 	}
 
 	sort.Ints(squaredArray1)

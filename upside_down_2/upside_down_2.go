@@ -52,8 +52,7 @@ func UpsideDown(n1, n2 string) uint64 {
 	return count
 }
 
-
-func isUpSideDown(x int, outcome chan bool)  {
+func isUpSideDown(x int, outcome chan bool) {
 
 	//convert the number to a string:
 	str := strconv.Itoa(x)
@@ -67,17 +66,16 @@ func isUpSideDown(x int, outcome chan bool)  {
 		result = append(result, exchange(v))
 	}
 
-	value, _ :=  strconv.Atoi(string(result))
+	value, _ := strconv.Atoi(string(result))
 
 	outcome <- value == x
 }
-
 
 func reverse(str string) string {
 
 	runes := []rune(str)
 
-	for i, j := 0, len(runes) - 1; i < j; i, j = i+1, j-1 {
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
 		runes[i], runes[j] = runes[j], runes[i]
 	}
 

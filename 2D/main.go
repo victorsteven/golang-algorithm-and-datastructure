@@ -69,6 +69,7 @@ m: number of columns in the input image
 */
 
 package main
+
 import "fmt"
 
 // TODO --- Write your function
@@ -77,8 +78,7 @@ func main() {
 
 	//star(10)
 
-
-	image1 := [][]int {
+	image1 := [][]int{
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 0, 0, 0, 1},
@@ -86,7 +86,7 @@ func main() {
 		[]int{1, 1, 1, 1, 1, 1, 1},
 	}
 
-	image2 := [][]int {
+	image2 := [][]int{
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
@@ -94,7 +94,7 @@ func main() {
 		[]int{1, 1, 1, 1, 1, 1, 0},
 	}
 
-	image3 := [][]int {
+	image3 := [][]int{
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
@@ -102,7 +102,7 @@ func main() {
 		[]int{1, 1, 1, 1, 1, 0, 0},
 	}
 
-	image4 := [][]int {
+	image4 := [][]int{
 		[]int{0, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
 		[]int{1, 1, 1, 1, 1, 1, 1},
@@ -110,15 +110,15 @@ func main() {
 		[]int{1, 1, 1, 1, 1, 1, 1},
 	}
 
-	image5 := [][]int {
+	image5 := [][]int{
 		[]int{0},
 	}
 
 	fmt.Println(rect(image1))
-	  fmt.Println(rect(image2))
-	  fmt.Println(rect(image3))
-	  fmt.Println(rect(image4))
-	  fmt.Println(rect(image5))
+	fmt.Println(rect(image2))
+	fmt.Println(rect(image3))
+	fmt.Println(rect(image4))
+	fmt.Println(rect(image5))
 
 }
 
@@ -142,7 +142,7 @@ func rect(image [][]int) []int {
 		}
 	}
 
-	x, y, w, z := theSlice[0], theSlice[1], theSlice[len(theSlice)-2],theSlice[len(theSlice)-1]
+	x, y, w, z := theSlice[0], theSlice[1], theSlice[len(theSlice)-2], theSlice[len(theSlice)-1]
 
 	theFinal := []int{}
 	theFinal = append(theFinal, x)
@@ -153,7 +153,6 @@ func rect(image [][]int) []int {
 	return theFinal
 
 }
-
 
 func star(n int) {
 	for i := 0; i < n; i++ {
@@ -167,7 +166,3 @@ func star(n int) {
 func starReverse(n int) {
 
 }
-
-
-
-

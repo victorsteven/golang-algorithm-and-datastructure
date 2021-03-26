@@ -2,7 +2,6 @@ package main
 
 //package subsequence_product_sum
 
-
 import "fmt"
 
 //Given an array of integers and an integer m, return the sum of the product of its subsequences of length m.
@@ -37,7 +36,7 @@ import "fmt"
 func main() {
 	a := ProductSum([]int{1, 2, 3}, 2)
 
-	b := ProductSum([]int{2,3,4,5}, 3)
+	b := ProductSum([]int{2, 3, 4, 5}, 3)
 
 	fmt.Println(a)
 	fmt.Println(b)
@@ -76,12 +75,11 @@ func ProductSum(a []int, m int) int {
 	for i := n - 1; i >= 0; i-- {
 		for k := 1; k < m+1; k++ {
 			if k == 1 {
-				p[i][k] = sm[i]; continue
+				p[i][k] = sm[i]
+				continue
 			}
 			p[i][k] = ((a[i] * p[i+1][k-1] % M) + p[i+1][k]) % M
 		}
 	}
 	return p[0][m]
 }
-
-

@@ -45,18 +45,17 @@ func Solution(n int) int {
 	return result
 }
 
-
 func Solution2(n int) int {
 	result := 0
 
-	for i := 1; i <=n; i++ {
+	for i := 1; i <= n; i++ {
 		if i < n {
-			switch  {
-			case i % 3 == 0 && i % 5 == 0:
+			switch {
+			case i%3 == 0 && i%5 == 0:
 				result += i
-			case i % 3 == 0:
+			case i%3 == 0:
 				result += i
-			case i % 5 == 0:
+			case i%5 == 0:
 				result += i
 			}
 		}
@@ -69,12 +68,12 @@ func Solution3(n int) int {
 
 	for i := 1; i <= n; i++ {
 		if i < n {
-			switch  {
-			case i % 3 == 0 && i % 5 == 0:
+			switch {
+			case i%3 == 0 && i%5 == 0:
 				result += i
-			case i % 3 == 0:
+			case i%3 == 0:
 				result += i
-			case i % 5 == 0:
+			case i%5 == 0:
 				result += i
 			}
 		}
@@ -113,7 +112,7 @@ func OrderByWeight(strng string) string {
 		x := weight(items[i])
 		y := weight(items[j])
 
-		if (x-y) == 0 {
+		if (x - y) == 0 {
 			return items[i] < items[j]
 		}
 
@@ -129,7 +128,7 @@ func OrderByWeight2(str string) string {
 		x := weight2(items[i])
 		y := weight2(items[j])
 
-		if (x-y) == 0 {
+		if (x - y) == 0 {
 			return items[i] < items[j]
 		}
 		return weight2(items[i]) <= weight(items[j])
@@ -143,7 +142,7 @@ func OrderByWeight3(str string) string {
 		x := weight3(items[i])
 		y := weight3(items[j])
 
-		if (x-y) == 0 {
+		if (x - y) == 0 {
 			return items[i] < items[j]
 		}
 		return weight3(items[i]) <= weight3(items[j])
@@ -182,7 +181,6 @@ func weight(str string) int {
 	return result
 }
 
-
 // Write a function called validBraces that takes a string of braces, and determines if the order of the braces is valid. validBraces should return true if the string is valid, and false if it's invalid.
 //
 //All input strings will be nonempty, and will only consist of open parentheses '(' , closed parentheses ')', open brackets '[', closed brackets ']', open curly braces '{' and closed curly braces '}'.
@@ -212,7 +210,7 @@ func weight(str string) int {
 
 func ValidBraces(str string) bool {
 
-	for x := 0; x <= len(str) + 2; x++ {
+	for x := 0; x <= len(str)+2; x++ {
 
 		str = strings.Replace(str, "()", "", -1)
 		str = strings.Replace(str, "[]", "", -1)
@@ -228,7 +226,7 @@ func ValidBraces(str string) bool {
 }
 
 func ValidBraces2(str string) bool {
-	for x := 0; x <= len(str) + 2; x++ {
+	for x := 0; x <= len(str)+2; x++ {
 		str = strings.Replace(str, "()", "", -1)
 		str = strings.Replace(str, "[]", "", -1)
 		str = strings.Replace(str, "{}", "", -1)
@@ -256,7 +254,7 @@ func OrderByWeight4(str string) string {
 		x := weight4(items[i])
 		y := weight4(items[j])
 
-		if (x-y) == 0 {
+		if (x - y) == 0 {
 			return items[i] < items[j]
 		}
 
@@ -282,11 +280,11 @@ func Solution4(n int) int {
 	for i := 1; i <= n; i++ {
 		if i < n {
 			switch {
-			case i % 3 == 0 && i % 5 == 0:
+			case i%3 == 0 && i%5 == 0:
 				result += i
-			case i % 3 == 0:
+			case i%3 == 0:
 				result += i
-			case i % 5 == 0:
+			case i%5 == 0:
 				result += i
 			}
 		}
@@ -294,10 +292,9 @@ func Solution4(n int) int {
 	return result
 }
 
-
 func main() {
 
 	fmt.Println(Solution4(10))
-	fmt.Println("valid brace: ", ValidBraces3( "(){}[]" ))
+	fmt.Println("valid brace: ", ValidBraces3("(){}[]"))
 	fmt.Println("final: ", OrderByWeight4("56 65 74 100 99 68 86 180 90"))
 }

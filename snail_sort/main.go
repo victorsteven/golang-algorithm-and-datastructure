@@ -11,22 +11,22 @@ func Snail(snailMap [][]int) []int {
 
 	for myLen > 0 {
 
-		for i := round; i < x - round; i++ {
+		for i := round; i < x-round; i++ {
 			res = append(res, snailMap[round][i])
 			myLen -= 1
 		}
 
-		for i := round + 1; i < x - round; i++ {
-			res = append(res, snailMap[i][x - 1 - round])
+		for i := round + 1; i < x-round; i++ {
+			res = append(res, snailMap[i][x-1-round])
 			myLen -= 1
 		}
 
 		for i := x - 2 - round; i >= round; i-- {
-			res = append(res, snailMap[x - 1 - round][i])
+			res = append(res, snailMap[x-1-round][i])
 			myLen -= 1
 		}
 
-		for i := x -2 - round; i > round; i-- {
+		for i := x - 2 - round; i > round; i-- {
 			res = append(res, snailMap[i][round])
 			myLen -= 1
 		}
@@ -37,7 +37,7 @@ func Snail(snailMap [][]int) []int {
 
 func main() {
 
-	array1 := [][]int{{1,2,3}, {4,5,6}, {7,8,9}}
+	array1 := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
 	ans1 := Snail(array1)
 	fmt.Println(ans1)
 }

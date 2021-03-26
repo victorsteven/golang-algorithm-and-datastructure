@@ -16,7 +16,7 @@ func main() {
 //Write a function to return the factorial of a number.
 //Solutions can be iterative or recursive.
 //Recursion solution
-func fac(n int) int  {
+func fac(n int) int {
 	if n < 2 {
 		return 1
 	}
@@ -37,4 +37,3 @@ func fibSeries(c chan int) {
 		a, b = b, a+b
 	}
 }
-

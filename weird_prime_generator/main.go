@@ -1,6 +1,5 @@
 package main
 
-
 //Consider the sequence a(1) = 7, a(n) = a(n-1) + gcd(n, a(n-1)) for n >= 2:
 //
 //7, 8, 9, 10, 15, 18, 19, 20, 21, 22, 33, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 69, 72, 73....
@@ -30,25 +29,28 @@ package main
 //
 //7: anOverAverage(n) with parameter n: returns as an *integer* the average of anOver(n)  (tested)
 
-
-
 var (
-	aCache    = map[int64]int64{1:7}
+	aCache    = map[int64]int64{1: 7}
 	pCache    []int64
 	nextIndex = int64(1)
 )
 
 func hasPi(pi int64) bool {
 	for _, v := range pCache {
-		if v == pi { return true }
+		if v == pi {
+			return true
+		}
 	}
 
 	return false
 }
 
 func gcd(a, b int64) int64 {
-	if a < b { a, b = b, a }
-	for ; (a % b) != 0; a, b = b, a % b {}
+	if a < b {
+		a, b = b, a
+	}
+	for ; (a % b) != 0; a, b = b, a%b {
+	}
 
 	return b
 }
@@ -56,7 +58,7 @@ func gcd(a, b int64) int64 {
 func a(n int64) int64 {
 	res, ok := aCache[n]
 	if !ok {
-		prev := a(n-1)
+		prev := a(n - 1)
 		res = prev + gcd(n, prev)
 
 		aCache[n] = res
@@ -66,7 +68,9 @@ func a(n int64) int64 {
 }
 
 func g(n int64) int64 {
-	if n == 1 { return 1 }
+	if n == 1 {
+		return 1
+	}
 
 	return a(n) - a(n-1)
 }
@@ -74,21 +78,32 @@ func g(n int64) int64 {
 func p(n int64) int64 {
 	n--
 	for ; n >= int64(len(pCache)); nextIndex++ {
-		for ; g(nextIndex) == 1; nextIndex++ {}
-		if !hasPi(g(nextIndex)) { pCache = append(pCache, g(nextIndex)) }
+		for ; g(nextIndex) == 1; nextIndex++ {
+		}
+		if !hasPi(g(nextIndex)) {
+			pCache = append(pCache, g(nextIndex))
+		}
 	}
 
 	return pCache[n]
 }
 
 func CountOnes(n int64) (res int) {
-	for i := int64(1); i <= n; i++ { if g(i) == 1 { res++ } }
+	for i := int64(1); i <= n; i++ {
+		if g(i) == 1 {
+			res++
+		}
+	}
 
 	return
 }
 
 func MaxPn(n int64) (res int64) {
-	for i := int64(1); i <= n; i++ { if res < p(i) { res = p(i) } }
+	for i := int64(1); i <= n; i++ {
+		if res < p(i) {
+			res = p(i)
+		}
+	}
 
 	return
 }
@@ -97,15 +112,13 @@ func AnOverAverage(n int64) int {
 	sum := float64(0)
 	idx := int64(1)
 	for i := int64(1); i <= n; i++ {
-		for ; g(idx) == 1; idx++ {}
+		for ; g(idx) == 1; idx++ {
+		}
 		sum += float64(a(idx)) / float64(idx)
 	}
 
 	return int(sum / float64(n))
 }
-
-
-
 
 //SOLUTION 2
 //func gcd(a, b int64) int64 {
@@ -146,9 +159,6 @@ func AnOverAverage(n int64) int {
 //	}
 //	return int(sum / n)
 //}
-
-
-
 
 //SOLUIION
 //func gcd(a, b int64) int64 {

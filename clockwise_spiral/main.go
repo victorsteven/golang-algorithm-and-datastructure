@@ -62,10 +62,10 @@ func CreateSpiral(n int) [][]int {
 	if n > 0 {
 		l := 0
 		t := 0
-		r := n-1
-		b := n-1
+		r := n - 1
+		b := n - 1
 
-		line := make([]int, n * n)
+		line := make([]int, n*n)
 		i := 1
 		for l < r {
 			for c := l; c <= r; c++ {
@@ -95,9 +95,9 @@ func CreateSpiral(n int) [][]int {
 		line[t*n+l] = i
 		// return matrice
 		for m := 0; m <= n-1; m++ {
-			low := m*n
-			high := m*n+n
-			matrice = append(matrice,line[low:high])
+			low := m * n
+			high := m*n + n
+			matrice = append(matrice, line[low:high])
 		}
 		return matrice
 	}

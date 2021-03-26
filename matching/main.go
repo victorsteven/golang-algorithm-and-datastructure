@@ -5,7 +5,6 @@ import (
 	"regexp"
 )
 
-
 //I got lots of files beginning like this:
 //Program title: Primes
 //Author: Kern
@@ -19,7 +18,6 @@ import (
 //The function change(s, prog, version) given:
 //s=data, prog="Ladder" , version="1.1" will return:
 //"Program: Ladder Author: g964 Phone: +1-503-555-0090 Date: 2019-01-01 Version: 1.1"
-
 
 //Rules:
 //The date should always be "2019-01-01".
@@ -44,7 +42,6 @@ import (
 //Note
 //You can see other examples in the "Sample tests".
 
-
 func main() {
 
 	s1 := "Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-0091\nDate: Tues April 9, 2005\nVersion: 6.7\nLevel: Alpha"
@@ -55,9 +52,9 @@ func main() {
 
 type rec struct {
 	program string
-	author string
-	phone string
-	date string
+	author  string
+	phone   string
+	date    string
 	version string
 }
 
@@ -66,7 +63,7 @@ func (r rec) String() string {
 }
 
 func Change(s string, prog string, version string) string {
-	r := rec{program: prog, author: "g964", date:"2019-01-01", phone: "+1-503-555-0090", version: "2.0"}
+	r := rec{program: prog, author: "g964", date: "2019-01-01", phone: "+1-503-555-0090", version: "2.0"}
 	re := regexp.MustCompile(`(.*)\: *(.*)\n?`)
 	//fmt.Println("this is the string re: ", re)
 	//fmt.Printf("the type of the re variable: %T\n", re)
@@ -97,7 +94,6 @@ func Change(s string, prog string, version string) string {
 	}
 	return r.String()
 }
-
 
 //Solution 2
 func Change2(s string, prog string, version string) (ret string) {

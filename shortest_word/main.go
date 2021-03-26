@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("this is the ans: ", FindShort("hello my name isdfs assdf"))
+	fmt.Println("this is the ans: ", FindShort("normal_http_call my name isdfs assdf"))
 }
 
 func FindShort(s string) int {
@@ -22,4 +22,3 @@ func FindShort(s string) int {
 	}
 	return len(lowestWord)
 }
-

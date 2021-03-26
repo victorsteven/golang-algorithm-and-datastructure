@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(print_error2("aaaxbbbbyyhwawiwjjjwwm"))
 }
 
-func print_error(str string) string  {
+func print_error(str string) string {
 	if len(str) <= 0 {
 		return ""
 	}
@@ -29,7 +29,7 @@ func print_error(str string) string  {
 	}
 	num := 0
 	strLen := len(str)
-	if  strLen > match {
+	if strLen > match {
 		num = strLen - match
 	} else {
 		num = match - len(str)

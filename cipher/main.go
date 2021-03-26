@@ -13,17 +13,17 @@ func cipher(str string, direction int) string {
 
 	for i, c := range runes {
 
-		switch  {
+		switch {
 		case direction > 0:
-			if c >= 'a' && c <= 'z' - shift || c >= 'A' && c <= 'Z' - shift {
+			if c >= 'a' && c <= 'z'-shift || c >= 'A' && c <= 'Z'-shift {
 				c = c + shift
-			} else if c > 'z' - shift && c <= 'z' || c > 'Z' - shift && c <= 'Z' {
+			} else if c > 'z'-shift && c <= 'z' || c > 'Z'-shift && c <= 'Z' {
 				c = c + shift - offset
 			}
 		case direction < 0:
-			if c >= 'a' + shift && c <= 'z'  || c >= 'A' + shift && c <= 'Z' {
+			if c >= 'a'+shift && c <= 'z' || c >= 'A'+shift && c <= 'Z' {
 				c = c - shift
-			} else if c >= 'a' && c < 'a' + shift || c >= 'A' + shift && c < 'A' + shift {
+			} else if c >= 'a' && c < 'a'+shift || c >= 'A'+shift && c < 'A'+shift {
 				fmt.Println("the one: ", string(c))
 				c = c - shift + offset
 			}

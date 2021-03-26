@@ -20,7 +20,7 @@ func LongestConsec(strarr []string, k int) string {
 				return longest_word
 			}
 		}
-		for j := i + 1;  j <= k; j++ {
+		for j := i + 1; j <= k; j++ {
 			str = longest_word + strarr[j]
 		}
 	}

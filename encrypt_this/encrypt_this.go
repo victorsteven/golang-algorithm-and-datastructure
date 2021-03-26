@@ -17,9 +17,7 @@ import (
 //Examples:
 //EncryptThis("Hello") == "72olle"
 //EncryptThis("good") == "103doo"
-//EncryptThis("hello world") == "104olle 119drlo"
-
-
+//EncryptThis("normal_http_call world") == "104olle 119drlo"
 
 func EncryptThis(text string) string {
 
@@ -55,8 +53,6 @@ func encryptThis(text string) string {
 	return output
 }
 
-
-
 //func EncryptThis(text string) string {
 //
 //	res := ""
@@ -88,4 +84,3 @@ func encryptThis(text string) string {
 //	}
 //	return strings.Join(words, " ")
 //}
-

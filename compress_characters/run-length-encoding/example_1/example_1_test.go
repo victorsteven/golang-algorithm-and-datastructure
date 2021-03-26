@@ -8,8 +8,8 @@ import (
 
 func TestSolution1(t *testing.T) {
 
-	sample := []struct{
-		str string
+	sample := []struct {
+		str    string
 		result string
 	}{
 		{
@@ -36,8 +36,8 @@ func TestSolution1(t *testing.T) {
 
 func TestSolution2(t *testing.T) {
 
-	sample := []struct{
-		str string
+	sample := []struct {
+		str    string
 		result string
 	}{
 		{

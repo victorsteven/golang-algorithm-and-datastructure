@@ -57,7 +57,7 @@ import "fmt"
 
 func PrimeFactors(n int) (ret string) {
 	for i, m := 2, 0; n > 0; {
-		if n % i != 0 {
+		if n%i != 0 {
 			if m == 1 {
 				ret += fmt.Sprintf("(%d)", i)
 			} else if m > 1 {
@@ -66,10 +66,10 @@ func PrimeFactors(n int) (ret string) {
 			if n == 1 {
 				break
 			}
-			i, m = i + 1, 0
+			i, m = i+1, 0
 			continue
 		}
-		n, m = n / i, m + 1
+		n, m = n/i, m+1
 	}
 
 	fmt.Println("ans: ", ret)

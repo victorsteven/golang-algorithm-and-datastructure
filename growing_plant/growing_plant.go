@@ -55,7 +55,6 @@ package growing_plant
 //
 //The number of days that it will take for the plant to reach/pass desiredHeight (including the last day in the total count).
 
-
 func GrowingPlant(upSpeed, downSpeed, desiredHeight int) int {
 
 	count := 1
@@ -84,7 +83,7 @@ func GrowingPlant2(upSpeed, downSpeed, desiredHeight int) int {
 	a := desiredHeight - upSpeed
 	b := upSpeed - downSpeed
 
-	return ((a+b-1)/b) + 1
+	return ((a + b - 1) / b) + 1
 }
 
 func GrowingPlant3(upSpeed, downSpeed, desiredHeight int) int {

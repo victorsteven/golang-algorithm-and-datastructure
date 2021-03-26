@@ -26,7 +26,6 @@ import (
 //
 //smallest(1000000) --> [1, 0, 6] or ...
 
-
 func main() {
 	fmt.Println(Smallest(4232132))
 
@@ -64,7 +63,6 @@ func Small(n int64) []int64 {
 	}
 	return []int64{ans, ansI, ansJ}
 }
-
 
 func Smallest(n int64) []int64 {
 	numStr := strconv.FormatInt(n, 10)

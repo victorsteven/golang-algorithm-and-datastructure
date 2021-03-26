@@ -13,7 +13,7 @@ func TestDecomp(t *testing.T) {
 
 	//assert.Equal(t, "2^19 * 3^9 * 5^4 * 7^3 * 11^2 * 13 * 17 * 19",  factorial_decomposition.Decomp(22))
 
-	assert.Equal(t, "2^11 * 3^5 * 5^2 * 7^2 * 11 * 13",  factorial_decomposition.Decomp(14))
+	assert.Equal(t, "2^11 * 3^5 * 5^2 * 7^2 * 11 * 13", factorial_decomposition.Decomp(14))
 
 	//assert.Equal(t, "2^22 * 3^10 * 5^6 * 7^3 * 11^2 * 13 * 17 * 19 * 23",  factorial_decomposition.Decomp(22))
 	//assert.Equal(t, "2^22 * 3^10 * 5^6 * 7^3 * 11^2 * 13 * 17 * 19 * 23",  factorial_decomposition.Decomp1(25))

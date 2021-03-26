@@ -7,7 +7,6 @@ import "fmt"
 //Task:
 //In this kata, we want to decompose a given true rectangle into the minimum number of squares, Then aggregate these generated squares together to form all the possible true rectangles.
 
-
 //Example: Refer to figure_1
 //As shown in this figure, we want to decompose the (13*5) true rectangle into the minimum number of squares which are [5, 5, 3, 2, 1, 1] to return all the possible true rectangles from aggregating these squares together :
 
@@ -58,14 +57,14 @@ func RectIntoRectangle1(l, w int) []string {
 	for sq, r := range sqs {
 		for j := 2; j <= r; j++ {
 			for k := 1; k <= 1+r-j; k++ {
-				rects = append(rects, fmt.Sprintf("(%d*%d)", sq * j, sq))
+				rects = append(rects, fmt.Sprintf("(%d*%d)", sq*j, sq))
 			}
 		}
 	}
 
 	l, w = l0, w0
 
-	for l % w > 0 && w%l > 0 {
+	for l%w > 0 && w%l > 0 {
 		lw()
 		rects = append(rects, fmt.Sprintf("(%d*%d)", l, w))
 		l -= w
@@ -103,7 +102,7 @@ func rectangles(squares []int) []string {
 			j++
 		}
 
-		if j + 1 < len(squares) {
+		if j+1 < len(squares) {
 			j++
 		}
 
@@ -118,7 +117,6 @@ func rectangles(squares []int) []string {
 	return ans
 
 }
-
 
 func RectIntoRectangle3(l, w int) []string {
 
@@ -136,12 +134,12 @@ func RectIntoRectangle3(l, w int) []string {
 			res = append(res, fmt.Sprintf("(%d*%d)", l, w))
 		}
 		i := l / w
-		if l % w == 0 {
+		if l%w == 0 {
 			i -= 1
 		}
 
 		for ; i > 1; i-- {
-			res = append(res, fmt.Sprintf("(%d*%d)", w * i, w))
+			res = append(res, fmt.Sprintf("(%d*%d)", w*i, w))
 		}
 		l -= w
 	}
@@ -150,7 +148,7 @@ func RectIntoRectangle3(l, w int) []string {
 
 }
 
-func RectIntoRectangle4(l,w int) []string {
+func RectIntoRectangle4(l, w int) []string {
 	if l == w || l == 0 || w == 0 {
 		return []string{}
 	}

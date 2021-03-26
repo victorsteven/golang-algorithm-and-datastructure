@@ -35,6 +35,3 @@ func TestCipher(t *testing.T) {
 		t.Errorf("got %s, want %s", result3, "CC Wrs")
 	}
 }
-
-
-

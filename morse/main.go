@@ -62,8 +62,7 @@ var MORSE_CODE = map[string]string{
 //	return strings.TrimSpace(decoded)
 //}
 
-
-func decodeMorse(morseCode string) string  {
+func decodeMorse(morseCode string) string {
 	decoded := ""
 	morseWords := strings.Split(morseCode, "   ")
 	for _, v := range morseWords {
@@ -75,26 +74,3 @@ func decodeMorse(morseCode string) string  {
 	}
 	return strings.TrimSpace(decoded)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

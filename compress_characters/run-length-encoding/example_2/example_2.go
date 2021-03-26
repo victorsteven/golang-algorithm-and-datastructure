@@ -17,7 +17,6 @@ import (
 //
 //q9w5e2rt5y4qw2Er3T
 
-
 func Solution1(str string) string {
 
 	count := 0
@@ -27,7 +26,7 @@ func Solution1(str string) string {
 		var a = string(str[i])
 		count = 1
 
-		for i + 1 < len(str) && string(str[i]) == string(str[i+1]) {
+		for i+1 < len(str) && string(str[i]) == string(str[i+1]) {
 			count++
 			i++
 		}
@@ -41,7 +40,6 @@ func Solution1(str string) string {
 
 	return result
 }
-
 
 func Solution2(str string) string {
 

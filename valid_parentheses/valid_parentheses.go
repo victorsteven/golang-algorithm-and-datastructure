@@ -36,7 +36,6 @@ func ValidParentheses(parens string) bool {
 	return b == 0
 }
 
-
 func ValidParentheses2(parens string) bool {
 
 	if len(parens) >= 100 {
@@ -47,7 +46,6 @@ func ValidParentheses2(parens string) bool {
 
 	return err == nil
 }
-
 
 func ValidParentheses3(parens string) bool {
 
@@ -67,8 +65,10 @@ func ValidParentheses4(parens string) bool {
 
 	for _, char := range parens {
 		switch char {
-		case '(': n++
-		case ')': n--
+		case '(':
+			n++
+		case ')':
+			n--
 		}
 		if n < 0 {
 			return false

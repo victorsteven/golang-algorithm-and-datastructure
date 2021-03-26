@@ -3,18 +3,19 @@ package singlylinkedlists
 import "errors"
 
 var (
-	errEmptyList = errors.New("list is empty")
+	errEmptyList        = errors.New("list is empty")
 	errIndexOutOfBounds = errors.New("index is out of bounds")
 )
+
 //SSLNode singly linked list node
 type SLLNode struct {
 	Value interface{}
-	Next *SLLNode
+	Next  *SLLNode
 }
-type SinglylinkedList struct  {
+type SinglylinkedList struct {
 	count int
-	head *SLLNode
-	tail *SLLNode
+	head  *SLLNode
+	tail  *SLLNode
 }
 
 //New factory to generate new singly linked lists
@@ -79,7 +80,7 @@ func (s *SinglylinkedList) GetIndexOf(value interface{}) int {
 
 //Add add to the list
 func (s *SinglylinkedList) Add(values ...interface{}) {
-	for _, value :=  range values {
+	for _, value := range values {
 		s.InsertAt(s.Size(), value)
 	}
 }
@@ -164,7 +165,6 @@ func (s *SinglylinkedList) RemoveAt(index int) (interface{}, error) {
 	current = nil
 	return value, nil
 }
-
 
 func (s *SinglylinkedList) getNode(index int) (*SLLNode, error) {
 	if index < 0 || index >= s.count {

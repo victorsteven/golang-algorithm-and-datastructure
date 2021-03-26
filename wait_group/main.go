@@ -15,7 +15,7 @@ func boys(b string) map[string]string {
 	bSlice := strings.Split(b, ",")
 	for _, v := range bSlice {
 		w := strings.Split(v, " ")
-		ans[w[0]] =  w[1]
+		ans[w[0]] = w[1]
 	}
 	return ans
 }

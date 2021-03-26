@@ -13,7 +13,6 @@ package vasya_clerk
 //Tickets([]int{25, 100}) // => NO. Vasya will not have enough money to give change to 100 dollars
 //Tickets([]int{25, 25, 50, 50, 100}) // => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of 50)
 
-
 func Tickets(peopleInLine []int) string {
 
 	t, f := 0, 0
@@ -41,9 +40,8 @@ func Tickets(peopleInLine []int) string {
 	return "YES"
 }
 
-
 func Tickets2(peopleInLine []int) string {
-	bank := map[int]int{25:0, 50:0, 100:0}
+	bank := map[int]int{25: 0, 50: 0, 100: 0}
 
 	for _, bill := range peopleInLine {
 		bank[bill]++

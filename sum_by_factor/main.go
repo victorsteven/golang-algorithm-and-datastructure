@@ -40,17 +40,17 @@ func main() {
 	//fmt.Println("The prime: list ", SumOfDivided(lst2))
 }
 
-func SumOfDivided(lst []int) string  {
+func SumOfDivided(lst []int) string {
 	factorMap := make(map[int]int)
 	for _, v := range lst {
 		for _, w := range unique_primes(v) {
 			//provided the key exists, add the "v" values
-			factorMap[w] = factorMap[w]  + v
+			factorMap[w] = factorMap[w] + v
 		}
 	}
 	fmt.Println("the factor map: ", factorMap)
 	keys := []int{}
-	for i := range  factorMap {
+	for i := range factorMap {
 		keys = append(keys, i)
 	}
 	sort.Ints(keys) //sort the array
@@ -61,13 +61,13 @@ func SumOfDivided(lst []int) string  {
 	return result
 }
 
-func unique_primes(n int) []int  {
+func unique_primes(n int) []int {
 	absNum := math.Abs(float64(n)) //change the negatives to positive
 	numInt := int(absNum)
 	divisor := 2
 	primes := []int{}
 	for numInt > 1 {
-		if numInt % divisor == 0 {
+		if numInt%divisor == 0 {
 			primes = append(primes, divisor)
 			numInt /= divisor
 		} else {
@@ -93,6 +93,3 @@ func unique_primes(n int) []int  {
 //	}
 //	return ans
 //}
-
-
-

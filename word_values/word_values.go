@@ -22,9 +22,9 @@ func NameValue(my_list []string) []int {
 	var result = make([]int, len(my_list))
 
 	for idx, str := range my_list {
-		for _, chr := range str  {
+		for _, chr := range str {
 			if chr >= 'a' && chr <= 'z' {
-				result[idx] += int(chr - 'a') + 1
+				result[idx] += int(chr-'a') + 1
 			}
 		}
 
@@ -44,12 +44,10 @@ func NameValue2(my_list []string) []int {
 		for _, c := range word {
 			temp += strings.Index(alphabet, string(c)) + 1
 		}
-		res = append(res, temp * (i * 1))
+		res = append(res, temp*(i*1))
 	}
 	return res
 }
-
-
 
 //This is not an optimized solution and is buggy
 //func NameValue(my_list []string) (result []int) {
@@ -95,4 +93,3 @@ func NameValue2(my_list []string) []int {
 //
 //	return result
 //}
-

@@ -31,13 +31,13 @@ func minRadius(k int, x, y []int, n int) int {
 	//Finding distance between of each point from origin
 	for i := 0; i < n; i++ {
 
-		dis[i] = x[i] * x[i] + y[i] * y[i]
+		dis[i] = x[i]*x[i] + y[i]*y[i]
 
 		//sorting the distance
 		sort.Ints(dis)
 
 	}
-	return  dis[k-1]
+	return dis[k-1]
 }
 
 func main() {

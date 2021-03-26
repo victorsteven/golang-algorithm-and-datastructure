@@ -21,8 +21,6 @@ import (
 //
 //Please also try the performance version of this kata at Upside down numbers - Challenge Edition
 
-
-
 func Solution(a, b int) int {
 
 	count := 0
@@ -39,17 +37,17 @@ func upsideDown(x int) bool {
 
 	str := strconv.Itoa(x)
 
-		strRev := reverse(str)
-		strArr := strings.Split(strRev, "")
+	strRev := reverse(str)
+	strArr := strings.Split(strRev, "")
 
-		result := ""
-		for _, v := range strArr {
-			result += upsideNumbers(v)
-		}
+	result := ""
+	for _, v := range strArr {
+		result += upsideNumbers(v)
+	}
 
-		value, _ := strconv.Atoi(result)
+	value, _ := strconv.Atoi(result)
 
-		return value == x
+	return value == x
 }
 
 func upsideNumbers(s string) string {
@@ -77,5 +75,3 @@ func reverse(s string) string {
 
 	return string(runes)
 }
-
-

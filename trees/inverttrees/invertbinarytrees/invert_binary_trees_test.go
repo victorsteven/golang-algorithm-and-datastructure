@@ -17,4 +17,3 @@ func TestInvertTree(t *testing.T) {
 	assert.Equal(t, node.Left.Data, 3)
 	assert.Equal(t, node.Right.Data, 2)
 }
-

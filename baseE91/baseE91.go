@@ -14,7 +14,6 @@ package baseE91
 //b91decode('>OwJh>Io0Tv!8PE') = 'Hello World!'
 //b91encode('Hello World!') = '>OwJh>Io0Tv!8PE'
 
-
 var enctab = []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~'")
 
 // Decoding table maps all the characters back to their integer values
@@ -101,7 +100,6 @@ func Decode(d []byte) []byte {
 	}
 	return o
 }
-
 
 func Encode2(ib []byte) []byte {
 	ebq, en := 0, uint(0)

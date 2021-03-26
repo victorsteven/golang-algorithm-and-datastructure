@@ -15,7 +15,7 @@ func runner(s string) string {
 	return string(s[0])
 }
 
-func LCS(s1, s2 string) string  {
+func LCS(s1, s2 string) string {
 	m := len(s1)
 	n := len(s2)
 	if m == 0 || n == 0 {

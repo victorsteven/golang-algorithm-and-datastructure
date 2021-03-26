@@ -56,7 +56,6 @@ import (
 //If you have some difficulty to see the tour I made a non terrific but maybe useful drawing:
 //
 
-
 func Tour(arrFriends []string, ftwns map[string]string, h map[string]float64) int {
 
 	result := 0.0
@@ -65,7 +64,7 @@ func Tour(arrFriends []string, ftwns map[string]string, h map[string]float64) in
 
 	for i := 1; i < len(arrFriends); i++ {
 		if v, ok := h[ftwns[arrFriends[i]]]; ok {
-			prev = h[ftwns[arrFriends[i - 1]]]
+			prev = h[ftwns[arrFriends[i-1]]]
 
 			result += Sqrt((Pow(v, 2)) - Pow(prev, 2))
 			println(result)
@@ -101,7 +100,6 @@ func Tour(arrFriends []string, ftwns map[string]string, h map[string]float64) in
 //	s += d[0] + d[len(d) - 1]
 //	return int(s)
 //}
-
 
 //func Tour(arrFriends []string, ftwns map[string]string, h map[string]float64) int {
 //	k := h[ftwns[arrFriends[0]]]

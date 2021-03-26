@@ -12,7 +12,7 @@ func main() {
 
 func binomialCoeff(n, k int) int {
 	res := 1
-	if k > n - k {
+	if k > n-k {
 		k = n - k
 	}
 	for i := 0; i < k; i++ {
@@ -30,5 +30,3 @@ func pascal(n int) {
 		fmt.Println()
 	}
 }
-
-

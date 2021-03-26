@@ -34,11 +34,11 @@ func CyclicRotation(A []int, k int) []int {
 		k = k % len(A)
 	}
 
-	lhs := A[len(A) - k:]
+	lhs := A[len(A)-k:]
 
 	fmt.Println("the lhs: ", lhs)
 
-	return append(lhs, A[:len(A) - k]...)
+	return append(lhs, A[:len(A)-k]...)
 }
 
 func main() {

@@ -51,7 +51,7 @@ func FibByLoop(n int64) int64 {
 
 	for i := int64(0); i < n; i++ {
 
-		value := fibBox[i] + fibBox[i + 1]
+		value := fibBox[i] + fibBox[i+1]
 
 		fibBox = append(fibBox, value)
 	}
@@ -68,9 +68,9 @@ func trackTime(start time.Time, result int64, name string) {
 	log.Printf("----> %s solution | result: %v | took: %s", name, result, elapsed)
 }
 
-type funcFib func(int64)int64
+type funcFib func(int64) int64
 
-func memoize(fn funcFib) func(int64)int64 {
+func memoize(fn funcFib) func(int64) int64 {
 	cache := make(map[int64]int64, 0)
 
 	return func(n int64) int64 {

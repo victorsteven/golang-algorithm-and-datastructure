@@ -31,8 +31,8 @@ func countLetter(str, letter string) int {
 
 func mix(s1, s2 string) string {
 	var allLowerCase = regexp.MustCompile(`[^[:lower:]]`)
-	s1  = allLowerCase.ReplaceAllString(s1, "")
-	s2  = allLowerCase.ReplaceAllString(s2, "")
+	s1 = allLowerCase.ReplaceAllString(s1, "")
+	s2 = allLowerCase.ReplaceAllString(s2, "")
 
 	output := []string{}
 
@@ -62,7 +62,7 @@ func mix(s1, s2 string) string {
 	keys := make(map[string]bool)
 
 	for i, v := range output {
-		if  v != "2:" && v != "1:" && v != "=:" {
+		if v != "2:" && v != "1:" && v != "=:" {
 			if _, value := keys[v]; !value {
 				keys[v] = true
 				newArray = append(newArray, output[i-1]) //add the 2:, 1: or =: before the characters
@@ -80,7 +80,6 @@ func mix(s1, s2 string) string {
 	return newest
 }
 
-
 //return a bool
 //func matching(str string) bool {
 //	var isLetter = regexp.MustCompile(`^[a-z]+$`).MatchString
@@ -97,4 +96,3 @@ func removeDelimeterAndUpperCase(str string) string {
 	var allLowerCase = regexp.MustCompile(`[^[:lower:]]`)
 	return allLowerCase.ReplaceAllString(str, "")
 }
-

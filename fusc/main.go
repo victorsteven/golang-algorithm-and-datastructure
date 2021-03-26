@@ -38,10 +38,10 @@ func fusc(n int) int {
 	if n == 0 || n == 1 {
 		return n
 	}
-	if n % 2 == 0 {
-		return fusc(n/2)
+	if n%2 == 0 {
+		return fusc(n / 2)
 	}
-	n = (n-1)/2
+	n = (n - 1) / 2
 	return fusc(n) + fusc(n+1)
 }
 
@@ -54,7 +54,7 @@ func fusc2(n int) int {
 	case n%2 == 0:
 		return fusc2(n / 2)
 	default:
-		n = (n-1) / 2
+		n = (n - 1) / 2
 		return fusc2(n) + fusc2(n+1)
 	}
 }
@@ -65,7 +65,6 @@ func fib(n int) int {
 	}
 	return fib(n-1) + fib(n-2)
 }
-
 
 func Fibbonacci(signature [2]float64, n int) []float64 {
 	result := signature[:]
@@ -93,7 +92,7 @@ func Tribonacci3(signature [3]float64, n int) []float64 {
 }
 
 func genFib(n int) []float64 {
-	result := []float64{1,1}
+	result := []float64{1, 1}
 	if n < 2 {
 		return result[:n]
 	}
@@ -110,9 +109,9 @@ func fusc3(n int) int {
 	if n < 2 {
 		return n
 	}
-	if n % 2 == 0 {
-		return fusc3(n/2)
+	if n%2 == 0 {
+		return fusc3(n / 2)
 	}
-	n = (n-1)/2
+	n = (n - 1) / 2
 	return fusc3(n) + fusc3(n+1)
 }
