@@ -35,14 +35,23 @@ package two_sum
 // Time complexity: O(n^2). For each element, we try to find its complement by looping through the rest of array which takes O(n) time. Therefore, the time complexity is O(n^2)
 // Space complexity: O(1_
 func TwoSum(nums []int, target int) []int {
+	//for i := 0; i < len(nums); i++ {
+	//	for j := i + 1; j < len(nums); j++ {
+	//		if nums[j] == target-nums[i] {
+	//			return []int{i, j}
+	//		}
+	//	}
+	//}
+
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
-			if nums[j] == target-nums[i] {
+			if nums[j] == target - nums[i] {
 				return []int{i, j}
 			}
 		}
 	}
 	return nil
+
 }
 
 // Approach 2: Two-pass Hash Table
@@ -67,6 +76,23 @@ func TwoSum2(nums []int, target int) []int {
 	return nil
 }
 
+func TwoSum2a(nums []int, target int) []int {
+	hashMap := make(map[int]int, len(nums))
+
+	for i, v := range nums {
+		hashMap[v] = i
+	}
+
+	for i, v := range nums {
+		complement := target - v
+
+		if _, ok := hashMap[complement]; ok && complement != v {
+			return []int{i, hashMap[complement]}
+		}
+	}
+	return nil
+}
+
 // Approach 3: One-pass Hash Table
 // Complexity Analysis:
 //
@@ -84,6 +110,32 @@ func TwoSum3(nums []int, target int) []int {
 			return []int{hashMap[complement], i}
 		}
 
+		hashMap[v] = i
+	}
+	return nil
+}
+
+func TwoSum3a(nums []int, target int) []int {
+	hashMap := make(map[int]int, len(nums))
+
+	for i, v := range nums {
+		complement := target - v
+		if _, ok := hashMap[complement]; ok {
+			return []int{hashMap[complement], i}
+		}
+		hashMap[v] = i
+	}
+	return nil
+}
+
+func TwoSum3b(nums []int, target int) []int {
+	hashMap := make(map[int]int, len(nums))
+
+	for i, v := range nums {
+		complement := target - v
+		if _, ok := hashMap[complement]; ok {
+			return []int{hashMap[complement], i}
+		}
 		hashMap[v] = i
 	}
 	return nil

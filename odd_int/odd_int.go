@@ -1,5 +1,7 @@
 package odd_int
 
+import "fmt"
+
 func FindOdd(seq []int) int {
 
 	hashMap := make(map[int]int)
@@ -8,6 +10,8 @@ func FindOdd(seq []int) int {
 		hashMap[v]++
 	}
 
+	fmt.Println("this is the seq: ", seq)
+	fmt.Println("this is the hashmap: ", hashMap)
 	for i, v := range hashMap {
 		if isOdd(v) {
 			return i

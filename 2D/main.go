@@ -153,7 +153,7 @@ func rect(image [][]int) []int {
 	return theFinal
 
 }
-
+//
 func star(n int) {
 	for i := 0; i < n; i++ {
 		for j := 0; j < i; j++ {
