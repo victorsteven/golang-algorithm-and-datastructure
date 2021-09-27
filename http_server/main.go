@@ -12,6 +12,10 @@ func main() {
 		fmt.Fprintf(w, "Hello\n")
 	})
 	log.Fatal(http.ListenAndServe(":8080", mux))
+
+	http.HandleFunc("/me", func(w http.ResponseWriter, req *http.Request){
+		fmt.Fprintf(w, "Hello")
+	})
 }
 
 //something else
